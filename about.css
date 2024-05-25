@@ -1,78 +1,99 @@
-/*Code to create the navigation bar*/
-navbar ul{
-    display:flex;
-    flex-direction: row;
-    padding:0;
-    margin:0;
-    height:60px;
-    background-color:hsl(0, 2%, 12%);
-    font-size: 25px;
-}
-navbar a{
-    text-decoration: none;
-    display:block;
-    text-align:center;
-    padding:10px;
-    color:white;
-    transition:color 0.3s ease;
-}
-navbar li{
-    list-style-type: none;
-}
-navbar a:active{
-    color:tomato;
-}
-navbar a:hover{
-    color:red;
-}
-/*end of code that creates the navigation bar*/
-article h2{
-    text-align:center;
-}
-body{
-    margin:0;
-    padding:0;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color:#333;
-    
-/*code to decorate the section of the page */
-section{
-    display:flex;
-    flex-wrap: wrap;
-    background-color:#000; 
-    justify-content:center;      
-}
-article{
-    margin:0;
-    border-style:solid;
-    flex-wrap:wrap;
-    margin:10px;
-    padding:10px;
-    flex:300px;
-    background-color:#000;
-    border-radius:20px;
-    color:white;
-    transition: color 0.3s ease;  
-}
-article p:hover{
-    color:red;
-}
-article:hover{
-    color:red;
-}
+    /*Code to create the navigation bar*/
+    navbar ul{
+        display:flex;
+        flex-direction: row;
+        padding:0;
+        margin:0;
+        height:60px;
+        background-color:hsl(0, 2%, 12%);
+        font-size: 25px;
+    }
+    navbar a{
+        text-decoration: none;
+        display:block;
+        text-align:center;
+        padding:10px;
+        color:white;
+        transition:color 0.3s ease;
+    }
+    navbar li{
+        list-style-type: none;
+    }
+    navbar a:active{
+        color:tomato;
+    }
+    navbar a:hover{
+        color:red;
+    }
+    /*end of code that creates the navigation bar*/
+    article h2{
+        text-align:center;
+    }
+    body{
+            margin:0;
+            padding:0;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color:#333;
+            
+        /*code to decorate the section of the page */
+        section{
+            display:flex;
+            flex-wrap: wrap;
+            background-color:#000; 
+            justify-content:center;      
+        }
+        section article{
+            margin:0;
+            border-style:solid;
+            flex-wrap:wrap;
+            margin:20px;
+            padding:10px;
+            flex:300px;
+            background-color:#000;
+            border-radius:20px;
+            color:white;
+            transition: color 0.5s ease;  
+        }
+        section article p:hover{
+            color:red;
+        }
+        section article:hover{
+            color:red;
+        }
 
-footer{
-    background-color: blue;
-}
-footer p{
-    text-align:center;
-    margin:0;
-    background-color:hsl(0, 16%, 10%);
-    color:white;
-}
-footer p:hover{
-    color:red;
-}
-footer:hover{
-    color:red;
-}
+        footer{
+            background-color: blue;
+        }
+        footer p{
+            text-align:center;
+            margin:0;
+            background-color:hsl(0, 16%, 10%);
+            color:white;
+        }
+        footer p:hover{
+            color:red;
+        }
+        footer:hover{
+            color:red;
+        }
+        
+        img{
+            width:200px;
+            height:200px;
+        }
+        .profile-images{
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            
+            
+        }
+        .profile-images article{
+            margin:5px;
+            
+        }
+        h2{
+            text-align: center;
+            color:white;
+            
+        }
+    }
