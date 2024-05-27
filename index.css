@@ -1,0 +1,130 @@
+@font-face{
+  font-family: roboto;
+  src: url(Fonts/Roboto-Regular.ttf);
+}
+@font-face{
+  font-family: playfair;
+  src: url(Fonts/PlayfairDisplay-Regular.ttf);
+}
+body{
+  margin: 0px;
+  height: 100vh;
+  font-family: roboto, Georgia;
+  background: 
+    radial-gradient(circle at top left, #ff7e5f, transparent 50%),
+    radial-gradient(circle at bottom right, #ff7e5f, transparent 50%),
+    radial-gradient(circle at center, #ff7e5f, transparent 50%),
+    #4480ce;
+  background-blend-mode: screen;
+  background-size: cover;
+}
+.sunIcon{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 50px;
+  height: auto;
+  animation-name: spin;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes spin{
+  100%{transform: rotate(360deg);}
+}
+#H51{
+  position: absolute;
+  left: 70px;
+  top: 1px;
+}
+#H52{
+  position: absolute;
+  left: 70px;
+  top: 15px;
+}
+.navbar ul{
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+.navbar a{
+  color: hsl(0, 0%, 0%);
+  font-weight: bolder;
+  text-decoration: none;
+  padding: 20px;
+  padding-left: 35px;
+  padding-right: 35px;
+  display: block;
+  text-align: center;
+  transition: color 0.3s linear;
+}
+.navbar a:hover{
+  color: orangered;
+}
+#login{
+  font-size: 15px;
+  background-color: hsl(0, 0%, 0%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 5px;
+  border: 0px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  transition: background-color 0.3s linear, font-weight 0.3s linear;
+}
+#login:hover{
+  background-color: orangered;
+}
+.main-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin-top: -60px;
+}
+.text{
+  max-width: 50%;
+  margin-left: 30px;
+  margin-top: 0px;
+}
+.peopleSmilingSafariRally{
+  width: 500px; 
+  height: auto;
+  border: 3px solid hsl(0, 0%, 0%);
+}
+h2{
+  font-family: playfair;
+  font-size: 60px;
+  margin-top: 0px;
+  padding-top: 0;
+}
+p{
+  font-family: playfair;
+  font-size: 20px;
+}
+#getStarted{
+  font-size: 17px;
+  background-color: hsl(0, 0%, 0%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 5px;
+  padding: 10px 50px;
+  margin-top: 25px;
+  border: 0px;
+  transition: background-color 0.3s linear, color 0.3s linear, font-weight 0.3s linear;
+}
+#getStarted:hover{
+  background-color: orangered;
+  color: black;
+}
