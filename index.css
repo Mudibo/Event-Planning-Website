@@ -137,7 +137,6 @@ p{
   height: auto;
   padding-left: 25px;
   padding-right: 25px;
-  
   box-sizing: border-box;
   border-radius: 25px;
   background: linear-gradient(to right, whitesmoke, beige);
@@ -151,7 +150,7 @@ p{
   font-family: playfair;
 }
 .testimonial{
-  font-size: 25px;
+  font-size: 22px;
   max-width: 800px;
   margin-bottom: 60px;
 }
@@ -176,4 +175,51 @@ p{
 }
 #company{
   left: 27px;
+}
+.main-content3{
+  height: auto;
+}
+.content3{
+  display: flex;
+  justify-content: center;
+}
+.factor{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 45px;
+  max-width: 300px;
+  border: 2px solid black;
+  border-radius: 25px;
+  margin-right: 20px;
+  margin-bottom: 40px;
+  background: rgb(255, 255, 255);
+  transition: border-color 0.3s linear;
+}
+.factor:hover{
+  border-color: green;
+  animation: move 0.5s linear;
+}
+@keyframes move{
+  50%{transform:translateY(20px)}
+}
+.factor img{
+  width: 130px;
+  height: auto;
+}
+.factor .description{
+  padding-top: 20px;
+  font-size: 23px;
+  text-align: center;
+  color: green;
+}
+.factor .deeperdescription{
+  word-spacing: 5px;
+  padding-top: 20px;
+  font-size: 17px;
+  text-align: center;
+}
+.main-content3 h2{
+  font-size: 47px;
+  text-align: center;
 }
