@@ -197,7 +197,7 @@ p{
   transition: border-color 0.3s linear;
 }
 .factor:hover{
-  border-color: green;
+  border-color: red;
   animation: move 0.5s linear;
 }
 @keyframes move{
