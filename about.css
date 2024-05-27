@@ -39,7 +39,7 @@
         section{
             display:flex;
             flex-wrap: wrap;
-            background-color:#000; 
+             
             justify-content:center;      
         }
         section article{
@@ -49,9 +49,8 @@
             margin:20px;
             padding:10px;
             flex:300px;
-            background-color:#000;
             border-radius:20px;
-            color:white;
+            color:black;
             transition: color 0.5s ease;  
         }
         section article p:hover{
@@ -93,7 +92,7 @@
         }
         h2{
             text-align: center;
-            color:white;
+            color:black;
             
         }
     }
