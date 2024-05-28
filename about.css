@@ -53,12 +53,46 @@
             color:black;
             transition: color 0.5s ease;  
         }
-        section article p:hover{
+        .who-we-are h2,
+        .our-story h2,
+        .what-we-do h2,
+        .who-we-are p,
+        .what-we-do p,
+        .our-story p{
             color:red;
         }
-        section article:hover{
+        .what-we-do:hover,
+        .who-we-are:hover,
+        .our-story:hover {
+            color:blue;
+        }
+        .what-we-do:hover h2,
+        .our-story:hover h2,
+        .who-we-are:hover h2,
+        .who-we-are:hover p,
+        .our-story:hover p,
+        .what-we-do:hover p{
+            color:blue;
+        }
+        .why-choose-us h2,
+        .create-something h2{
+            color:blue;
+        }
+        .why-choose-us p,
+        .create-something p{
+            color:blue;
+        }
+        .why-choose-us:hover h2,
+        .create-something:hover h2{
             color:red;
         }
+        .why-choose-us:hover p,
+        .create-something:hover p{
+            color:red;
+        }
+       
+
+       
 
         footer{
             background-color: blue;
