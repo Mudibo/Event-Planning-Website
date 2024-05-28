@@ -13,13 +13,11 @@ body{
   margin: 0px;
   min-height: 100vh;
   font-family: roboto, Georgia; 
-  background: 
-    radial-gradient(circle at top left, #ff7e5f, transparent 50%),
-    radial-gradient(circle at bottom right, #ff7e5f, transparent 50%),
-    radial-gradient(circle at center, #ff7e5f, transparent 50%),
-    #4480ce;
-  background-blend-mode: screen;
+  background: url(Images/cool-background.png);
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .sunIcon{
@@ -81,7 +79,7 @@ body{
   transition: color 0.3s linear;
 }
 .navbar a:hover{
-  color: white;
+  color: hsl(0, 100%, 50%);
 }
 #login{
   font-size: 15px;
@@ -91,11 +89,11 @@ body{
   border: 0px;
   top: 10px;
   right: 10px;
-  padding: 5px 40px;
+  padding: 5px 50px;
   transition: background-color 0.3s linear, font-weight 0.3s linear;
 }
 #login:hover{
-  background-color: orangered;
+  background-color: hsl(0, 100%, 50%);
 }
 .main-content{
   display: flex;
@@ -139,11 +137,10 @@ p{
   padding: 10px 50px;
   margin-top: 25px;
   border: 0px;
-  transition: background-color 0.3s linear, color 0.3s linear, font-weight 0.3s linear;
+  transition: background-color 0.3s linear;
 }
 #getStarted:hover{
-  background-color: orangered;
-  color: black;
+  background-color: hsl(0, 100%, 50%);
 }
 
 .main-content2{
@@ -196,6 +193,7 @@ p{
 
 .main-content3{
   height: auto;
+  margin-bottom: 50px;
 }
 .content3{
   display: flex;
@@ -212,11 +210,11 @@ p{
   border-radius: 25px;
   margin-right: 20px;
   margin-bottom: 40px;
-  background: rgb(255, 255, 255);
+  background: rgb(155, 250, 218);
   transition: border-color 0.3s linear;
 }
 .factor:hover{
-  border-color: red;
+  border-color: hsl(0, 100%, 50%);
   animation: move 0.5s linear;
 }
 @keyframes move{
@@ -244,14 +242,14 @@ p{
 }
 .explore a{
   text-decoration: none;
-  color: blue;
+  color: hsl(240, 100%, 50%);
   transition: color 0.3s linear;
 }
 .explore a:hover{
-  color: rgb(255, 115, 0);
+  color: hsl(27, 100%, 50%);
 }
 .main-content3 h2{
   font-size: 40px;
-  color: white;
+  color: hsl(0, 0%, 100%);
   text-align: center;
 }
