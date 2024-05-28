@@ -10,6 +10,9 @@ body{
   margin: 0px;
   min-height: 100vh;
   font-family: roboto, Georgia; 
+  margin: 0px;
+  min-height: 100vh;
+  font-family: roboto, Georgia; 
   background: 
     radial-gradient(circle at top left, #ff7e5f, transparent 50%),
     radial-gradient(circle at bottom right, #ff7e5f, transparent 50%),
@@ -18,12 +21,12 @@ body{
   background-blend-mode: screen;
   background-size: cover;
 }
+
 .sunIcon{
-  position: absolute;
-  top: 10px;
-  left: 10px;
   width: 50px;
   height: auto;
+  right: -5px;
+  position: relative;
   animation-name: spin;
   animation-duration: 4s;
   animation-iteration-count: infinite;
@@ -34,14 +37,32 @@ body{
 }
 #H51{
   position: absolute;
-  left: 70px;
-  top: 1px;
+  left: 60px;
+  top: -12px;
 }
 #H52{
   position: absolute;
-  left: 70px;
-  top: 15px;
+  left: 60px;
+  top: 6px;
 }
+.navbar{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  transition: background-color 0.3s ease, border bottom 0.3s ease;
+  z-index:  1000;
+}
+.navbar.scrolled{
+  background-color: hsl(0, 0%, 100%);
+  border-bottom: 1px solid hsl(0, 0%, 0%);
+}
+.navbar img, .navbar h5, .navbar ul, .navbar #login {
+  z-index: 1001; 
+}  
 .navbar ul{
   list-style-type: none;
   padding: 0px;
@@ -54,9 +75,7 @@ body{
   color: hsl(0, 0%, 0%);
   font-weight: bolder;
   text-decoration: none;
-  padding: 20px;
-  padding-left: 35px;
-  padding-right: 35px;
+  padding: 10px 30px;
   display: block;
   text-align: center;
   transition: color 0.3s linear;
@@ -70,12 +89,9 @@ body{
   color: hsl(0, 0%, 100%);
   border-radius: 5px;
   border: 0px;
-  position: absolute;
   top: 10px;
   right: 10px;
-  padding: 10px;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding: 5px 40px;
   transition: background-color 0.3s linear, font-weight 0.3s linear;
 }
 #login:hover{
@@ -92,7 +108,7 @@ body{
   justify-content: space-between;
   align-items: center;
   width: 90%;
-  margin-top: -60px;
+  margin-top: 60px;
 }
 .text{
   max-width: 50%;
@@ -129,6 +145,7 @@ p{
   background-color: orangered;
   color: black;
 }
+
 .main-content2{
   display: flex;
   flex-direction: column;
@@ -143,7 +160,7 @@ p{
   margin: 100px;
 }
 .quote{
-  width: 150px;
+  width: 120px;
   height: auto;
   margin-bottom: 10px;
   margin-top: 10px;
@@ -176,6 +193,7 @@ p{
 #company{
   left: 27px;
 }
+
 .main-content3{
   height: auto;
 }
@@ -188,6 +206,7 @@ p{
   flex-direction: column;
   align-items: center;
   padding: 45px;
+  padding-bottom: 10px;
   max-width: 300px;
   border: 2px solid black;
   border-radius: 25px;
@@ -219,7 +238,20 @@ p{
   font-size: 17px;
   text-align: center;
 }
+.factor .explore{
+  padding-top: 20px;
+  text-align: center;
+}
+.explore a{
+  text-decoration: none;
+  color: blue;
+  transition: color 0.3s linear;
+}
+.explore a:hover{
+  color: rgb(255, 115, 0);
+}
 .main-content3 h2{
-  font-size: 47px;
+  font-size: 40px;
+  color: white;
   text-align: center;
 }
