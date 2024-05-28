@@ -39,8 +39,10 @@
         section{
             display:flex;
             flex-wrap: wrap;
-             
-            justify-content:center;      
+            background-color:rgba(255,0,0,0.1); 
+            justify-content:center;  
+            padding:20px;    
+            
         }
         section article{
             margin:0;
@@ -90,6 +92,11 @@
         .create-something:hover p{
             color:red;
         }
+        .why-choose-us:hover,
+        .create-something:hover{
+            color:red;
+        }
+         
        
 
        
