@@ -9,7 +9,7 @@
 body{
   margin: 0px;
   min-height: 100vh;
-  font-family: roboto, Georgia;
+  font-family: roboto, Georgia; 
   background: 
     radial-gradient(circle at top left, #ff7e5f, transparent 50%),
     radial-gradient(circle at bottom right, #ff7e5f, transparent 50%),
@@ -62,7 +62,7 @@ body{
   transition: color 0.3s linear;
 }
 .navbar a:hover{
-  color: orangered;
+  color: white;
 }
 #login{
   font-size: 15px;
