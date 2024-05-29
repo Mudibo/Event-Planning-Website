@@ -23,9 +23,10 @@
         color:tomato;
     }
     navbar a:hover{
-        color:red;
-        
+        color:red;  
     }
+    
+    
     /*end of code that creates the navigation bar*/
     article h2{
         text-align:center;
@@ -92,15 +93,15 @@
         }
         .why-choose-us:hover h2,
         .create-something:hover h2{
-            color:red;
+            color:blue;
         }
         .why-choose-us:hover p,
         .create-something:hover p{
-            color:red;
+            color:blue;
         }
         .why-choose-us:hover,
         .create-something:hover{
-            color:red;
+            color:blue;
         }
          
        
@@ -146,6 +147,10 @@
             
         }
         main{
-            padding:20px;
+            padding:10px;
         }
+        .profile-images article:hover{
+            color:red;
+        }
+       
     }
