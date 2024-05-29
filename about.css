@@ -12,9 +12,9 @@
         text-decoration: none;
         display:block;
         text-align:center;
-        padding:10px;
+        padding:15px;
         color:white;
-        transition:color 0.3s ease;
+        transition:color 0.5s ease, background-color 0.5s ease;
     }
     navbar li{
         list-style-type: none;
@@ -24,6 +24,7 @@
     }
     navbar a:hover{
         color:red;
+        
     }
     /*end of code that creates the navigation bar*/
     article h2{
@@ -39,7 +40,6 @@
         section{
             display:flex;
             flex-wrap: wrap;
-            background-color:rgba(255,0,0,0.1); 
             justify-content:center;  
             padding:20px;    
             
@@ -51,9 +51,15 @@
             margin:20px;
             padding:10px;
             flex:300px;
-            border-radius:20px;
+            border: 2px solid;
+            border-radius:10px;
+            box-shadow:0 4px 8px rgba(0,0,0,0.1);
             color:black;
-            transition: color 0.5s ease;  
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+        section article:hover{
+            box-shadow:0 8px 16px rgba(0,0,0,0.2);
+            transform:translateY(-10px);
         }
         .who-we-are h2,
         .our-story h2,
@@ -61,7 +67,7 @@
         .who-we-are p,
         .what-we-do p,
         .our-story p{
-            color:red;
+            color:black;
         }
         .what-we-do:hover,
         .who-we-are:hover,
@@ -78,11 +84,11 @@
         }
         .why-choose-us h2,
         .create-something h2{
-            color:blue;
+            color:black;
         }
         .why-choose-us p,
         .create-something p{
-            color:blue;
+            color:black;
         }
         .why-choose-us:hover h2,
         .create-something:hover h2{
@@ -102,12 +108,13 @@
        
 
         footer{
-            background-color: blue;
+            background-color: black;
+            padding:20px;
         }
         footer p{
             text-align:center;
             margin:0;
-            background-color:hsl(0, 16%, 10%);
+           
             color:white;
         }
         footer p:hover{
@@ -120,20 +127,25 @@
         img{
             width:200px;
             height:200px;
+            border-radius:10px;
+            transition:transform 0.3s ease;
         }
         .profile-images{
             display:grid;
             grid-template-columns: 1fr 1fr 1fr 1fr;
-            
+            gap:20px;
             
         }
         .profile-images article{
             margin:5px;
-            
+            text-align:center;
         }
         h2{
             text-align: center;
             color:black;
             
+        }
+        main{
+            padding:20px;
         }
     }
