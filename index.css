@@ -241,18 +241,6 @@ h2{
   font-size: 17px;
   text-align: center;
 }
-.factor .explore{
-  padding-top: 20px;
-  text-align: center;
-}
-.explore a{
-  text-decoration: none;
-  color: hsl(240, 100%, 50%);
-  transition: color 0.3s linear;
-}
-.explore a:hover{
-  color: hsl(27, 100%, 50%);
-}
 .main-content3 h2{
   font-size: 40px;
   color: hsl(0, 0%, 0%);
@@ -273,7 +261,6 @@ h2{
   background:
     radial-gradient(circle at top right, transparent 70%, red),
     black;
-  background-blend-mode: screen;
 }
 .main-content4 h2{
   font-size: 70px;
@@ -290,4 +277,8 @@ h2{
   width: 600px;
   height: auto;
   padding-bottom: 20px;
+  transition: transform 0.5s ease-in-out;
+}
+.content4 img:hover{
+  transform: scale(1.05);
 }
