@@ -20,6 +20,8 @@ body{
   background-attachment: fixed;
 }
 
+
+
 .sunIcon{
   width: 50px;
   height: auto;
@@ -51,12 +53,12 @@ body{
   justify-content: space-between;
   align-items: center;
   background-color: transparent;
-  transition: background-color 0.3s ease, border bottom 0.3s ease;
+  transition: background-color 0.3s linear, border-bottom 0.3s linear;
   z-index:  1000;
 }
 .navbar.scrolled{
   background-color: hsl(0, 0%, 100%);
-  border-bottom: 1px solid hsl(0, 0%, 0%);
+  border-bottom: 1.5px solid hsl(0, 0%, 0%);
 }
 .navbar img, .navbar h5, .navbar ul, .navbar #login {
   z-index: 1001; 
@@ -125,9 +127,9 @@ h2{
   margin-top: 0px;
   padding-top: 0;
 }
-p{
+.text p{
   font-family: playfair;
-  font-size: 20px;
+  font-size: 22px;
 }
 #getStarted{
   font-size: 17px;
@@ -142,6 +144,8 @@ p{
 #getStarted:hover{
   background-color: hsl(0, 100%, 50%);
 }
+
+
 
 .main-content2{
   display: flex;
@@ -191,9 +195,10 @@ p{
   left: 27px;
 }
 
+
+
 .main-content3{
-  height: auto;
-  margin-bottom: 50px;
+  height: 100vh;
 }
 .content3{
   display: flex;
@@ -210,7 +215,7 @@ p{
   border-radius: 25px;
   margin-right: 20px;
   margin-bottom: 40px;
-  background: rgb(155, 250, 218);
+  background: hsl(160, 90%, 79%);
   transition: border-color 0.3s linear;
 }
 .factor:hover{
@@ -228,7 +233,7 @@ p{
   padding-top: 20px;
   font-size: 23px;
   text-align: center;
-  color: green;
+  color: hsl(120, 100%, 25%);
 }
 .factor .deeperdescription{
   word-spacing: 5px;
@@ -250,6 +255,39 @@ p{
 }
 .main-content3 h2{
   font-size: 40px;
+  color: hsl(0, 0%, 0%);
+  text-align: center;
+}
+
+
+
+.transition-container{
+  height: 150px;
+  background: linear-gradient(to bottom, transparent, black);
+}
+
+
+
+.main-content4{
+  height: auto;
+  background:
+    radial-gradient(circle at top right, transparent 70%, red),
+    black;
+  background-blend-mode: screen;
+}
+.main-content4 h2{
+  font-size: 70px;
   color: hsl(0, 0%, 100%);
   text-align: center;
+}
+.content4{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.content4 img{
+  width: 600px;
+  height: auto;
+  padding-bottom: 20px;
 }
