@@ -162,6 +162,10 @@
             transform:scale(1.1);
             transition:0.2s ease-in;
         } 
+        
+        .profile-images p:hover{
+            color:black;
+        }
         footer img{
             width:20px;
             height:20px;
