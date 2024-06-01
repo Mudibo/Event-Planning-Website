@@ -21,29 +21,9 @@ body{
 }
 
 
-
-.sunIcon{
-  width: 50px;
+.navbar img{
+  width: 150px;
   height: auto;
-  right: -5px;
-  position: relative;
-  animation-name: spin;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-}
-@keyframes spin{
-  100%{transform: rotate(360deg);}
-}
-#H51{
-  position: absolute;
-  left: 60px;
-  top: -12px;
-}
-#H52{
-  position: absolute;
-  left: 60px;
-  top: 6px;
 }
 .navbar{
   position: fixed;
@@ -60,7 +40,7 @@ body{
   background-color: hsl(0, 0%, 100%);
   border-bottom: 1.5px solid hsl(0, 0%, 0%);
 }
-.navbar img, .navbar h5, .navbar ul, .navbar #login {
+.navbar img, .navbar ul, .navbar #login{
   z-index: 1001; 
 }  
 .navbar ul{
@@ -238,6 +218,7 @@ h2{
 .factor .deeperdescription{
   word-spacing: 5px;
   padding-top: 20px;
+  padding-bottom: 60px;
   font-size: 17px;
   text-align: center;
 }
@@ -258,9 +239,7 @@ h2{
 
 .main-content4{
   height: auto;
-  background:
-    radial-gradient(circle at top right, transparent 70%, red),
-    black;
+  background-color: black;
 }
 .main-content4 h2{
   font-size: 70px;
@@ -281,4 +260,49 @@ h2{
 }
 .content4 img:hover{
   transform: scale(1.05);
+}
+
+
+
+footer{
+  margin-top: 0px;
+  height: auto;
+}
+.footer{
+  background-color: rgb(255, 255, 255);
+  border: 2px solid black;
+  color: black;
+  text-align: center;
+  padding-top: 70px;
+  padding-bottom: 40px;
+}
+.footer h3{
+  color: hsl(0, 100%, 50%);
+}
+.footer ul{
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+.footer ul a{
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+  font-weight: bolder;
+  text-decoration: none;
+  padding: 10px 30px;
+  display: block;
+  text-align: center;
+}
+.footer ul a img{
+  width: 50px;
+}
+.footer ul a:hover{
+  transform: scale(1.2);
+}
+.footer #H4{
+  position: relative;
+  top: 20px;
 }
