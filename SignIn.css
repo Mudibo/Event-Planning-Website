@@ -84,7 +84,7 @@
     border: 2px solid rgb(0, 0, 0);
     z-index: 2;
 }
-.register-container{
+.login-container{
     transition: .5s ease-in-out;
     flex-direction: column;
 }
@@ -97,7 +97,7 @@
 }
 .top span a{
     font-weight: 500;
-    color: rgb(220, 20, 20);
+    color:  rgb(220, 20, 20);
     margin-left: 5px;
 }
 header{
@@ -112,7 +112,7 @@ header{
 }
 .input-field{
     font-size: 15px;
-    background: hsl(0, 0%, 100%);
+    background: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
     height: 40px;
     width: 100%;
@@ -162,18 +162,6 @@ header{
     height: 15px;
     cursor: pointer;
 }
-.two{
-    display: flex;
-    align-items: center;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin: 10px 0;
-}
-.two input{
-    margin-right: 10px;
-    width: 15px;
-    height: 15px;
-    cursor: pointer;
-}
 .two-col{
     display: flex;
     flex-direction: column;
@@ -185,6 +173,7 @@ header{
 }
 .two-col .one, .two-col .two {
     margin-bottom: 10px; /* Adjust spacing as needed */
+    color: black;
 }
 .two label{
     text-decoration: none;
@@ -196,9 +185,3 @@ header{
 .two label a:hover{
     text-decoration: none;
 }
-
-
-      
-        
-
-
