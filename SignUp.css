@@ -32,6 +32,9 @@
   .navbar img{
     width: 150px;
     height: auto;
+    position: relative;
+    top: 2px;
+    left: 2px;
   }
   .navbar{
     position: fixed;
