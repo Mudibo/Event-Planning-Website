@@ -130,6 +130,7 @@ h2{
 
 
 
+/* Testimonial */
 .main-content2{
   display: flex;
   flex-direction: column;
@@ -180,6 +181,7 @@ h2{
 
 
 
+/* Why clients should go for our site */
 .main-content3{
   height: 100vh;
 }
@@ -234,6 +236,7 @@ h2{
 
 
 
+/* To transition the page from blue into a black background which better suits the gallery */
 .transition-container{
   height: 150px;
   background: linear-gradient(to bottom, transparent, black);
@@ -241,6 +244,7 @@ h2{
 
 
 
+/* Gallery of our events planned using our site */
 .main-content4{
   height: auto;
   background-color: black;
@@ -268,7 +272,8 @@ h2{
 
 
 
-footer{
+/* Footer information */
+.footer{
   margin-top: 0px;
   height: auto;
 }
@@ -310,3 +315,12 @@ footer{
   position: relative;
   top: 20px;
 }
+
+
+
+/* Responsive CSS for mobile*/
+@media screen and (max-width:600px){
+  body{
+    width: 100%;
+  }
+}  

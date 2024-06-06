@@ -1,32 +1,51 @@
+/* Page formatting */
 @import url('index.css');
-body{
-  margin: 0;
+html, body{
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
   font-family: roboto, Georgia;
-  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  background: url(Images/EventsPageBackground.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+
+/* Main heading and event options */
+main{
+  flex-grow: 1; 
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: 20px;
-  box-sizing: border-box;
+  padding-bottom: 100px;
 }
-
 h2{
-  font-family: playfair;
+  font-family: roboto;
   font-size: 40px;
   color: hsl(0, 0%, 100%);
-  margin-top: 90px;
+  margin-top: 110px;
+  text-align: center;
 }
-
 .event-options{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
   width: 80%;
   max-width: 1200px;
   margin-top: 50px;
 }
 .event-option{
-  font-family: roboto;
   font-size: 20px;
   background-color: hsl(0, 0%, 0%);
   color: hsl(0, 0%, 100%);
@@ -34,12 +53,59 @@ h2{
   padding: 40px;
   text-align: center;
   border-radius: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s linear, box-shadow 0.3s linear, background-color 0.3s linear;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .event-option:hover{
   transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+  background-color: rgb(247, 58, 58);
+  box-shadow: 0px 0px 50px hsl(0, 0%, 100%);
+}
+
+
+
+/* Footer */
+.footer2{
+  width: 100%;
+  background-color: hsl(0, 0%, 0%);
+  color: hsl(0, 0%, 100%);
+  text-align: center;
+  padding: 20px 0px; 
+  position: relative; 
+  bottom: 0px; 
+}
+.footer2 ul{
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+}
+.footer2 ul a{
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+  font-weight: bold;
+  padding: 10px 30px;
+  display: block;
+  text-align: center;
+}
+.footer2 ul a img{
+  width: 50px;
+}
+.footer2 ul a:hover{
+  transform: scale(1.2);
+}
+.footer2 h3{
+  color: hsl(0, 100%, 50%);
+}
+
+
+
+/* Responsive CSS for mobile*/
+@media screen and (max-width:600px){
+  body{
+    width: 100%;
+  }
 }
