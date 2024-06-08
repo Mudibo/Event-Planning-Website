@@ -4,7 +4,7 @@ body{
     background-size:cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-attachment: fixed; 
+    background-attachment: fixed;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 navbar img{
@@ -55,7 +55,7 @@ navbar a:hover{
     color:black;
     border:2px solid black;
     margin-bottom:10px;
-    width:100%;
+    width:90%;
     transition:border-color 0.3s, box-shadow 0.3s;
 }
 .contact-form input:focus, .contact-form textarea:focus{
@@ -104,6 +104,8 @@ section{
     border-radius:15px;
     box-shadow:0 4px 8px rgba(10, 9, 9, 0.2);
     width:40%;
+    background:transparent;
+    background-color:burlywood;
 }
 
 
