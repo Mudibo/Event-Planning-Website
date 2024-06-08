@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA Compatible" content="IE-edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Events</title>
-  <link rel="stylesheet" href="events.css">
+  <title>Event Details</title>
+  <link rel="stylesheet" href="eventForm.css">
   <link rel="icon" type="images" href="Icons/balloons.png">
   <script src="https://kit.fontawesome.com/d519ed3f40.js" crossorigin="anonymous"></script>
 </head>
@@ -25,18 +25,9 @@
       </ul>
       <a href="SignIn.html"><button id="login">Login</button></a>
     </nav>
-    
-    <h2>What kind of event are we planning?</h2>
-    <div class="event-options">
-      <a href="eventForm.html?event=wedding" class="event-option">Wedding Ceremony</a>
-      <a href="eventForm.html?event=birthday" class="event-option">Birthday Party</a>
-      <a href="eventForm.html?event=corporate" class="event-option">Corporate Event</a>
-      <a href="eventForm.html?event=concert" class="event-option">Concert</a>
-      <a href="eventForm.html?event=picnic" class="event-option">Paint and Sip / Picnic</a>
-      <a href="eventForm.html?event=social" class="event-option">Social Gathering</a>
-      <a href="eventForm.html?event=fundraiser" class="event-option">Fundraiser</a>
-      <a href="eventForm.html?event=other" class="event-option">Other (Please Specify)</a>
-    </div>
+
+    <h2 id="event-title">Event Details</h2>
+    <div id="form-container"></div>
 
   </main>
 
@@ -56,6 +47,7 @@
     <div><h4 id="H4">Copyright &copy; 2024 Plannit. All rights reserved</h4></div>
     </div>
   </footer>
-   
+  
   <script src="index.js"></script>
+  <script src="eventForm.js"></script>
 </body>
