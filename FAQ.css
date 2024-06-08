@@ -88,7 +88,7 @@ body{
   margin: 0 auto;
 }
 .faq li {
-  background: wheat;
+  background: #caf0f8;
   border-bottom: 1px palevioletred solid;
 }
 .faq li:first-child {
@@ -114,7 +114,7 @@ body{
   transition: 0.3s;
 }
 .faq p {
-  color: rgb(232, 22, 15);
+  color: rgb(182, 43, 90);
   line-height: 25px;
 }
 .a {
