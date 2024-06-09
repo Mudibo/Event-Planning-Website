@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         <option value="venue5">Carnivore</option>
                     </select><br><br>
                     <label for="date">Date:</label>
-                    <input type="date" id="date"><br><br>
+                    <input type="date" id="date" required><br><br>
                     <label for="theme">Any preferred theme?</label>
                     <input type="text" id="theme" placeholder="Zilizopendwa Art, Music and Fashion"><br><br>
                     <label for="catering">Caterers:</label>
@@ -193,7 +193,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         <option value="catering5">VENUE CATERERS</option>
                     </select><br><br>
                     <label for="date">Date:</label>
-                    <input type="date" id="date"><br><br>
+                    <input type="date" id="date" required><br><br>
                     <label for="objective">Objective:</label>
                     <input type="text" id="objective" placeholder="Sustainable Development Goals"><br><br>
                     <label for="description">Description:</label>
@@ -261,7 +261,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         <option value="security4">KK Security - A GardaWorld Company</option>
                     </select><br><br>
                     <label for="date">Date:</label>
-                    <input type="date" id="date"><br><br>
+                    <input type="date" id="date" required><br><br>
                     <label for="tickets">Sell tickets at the entrance?</label>
                     <input type="checkbox" id="tickets"><br><br>
                     <label for="backstage">Provide backstage refreshments?</label>
@@ -313,7 +313,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         <option value="paintingSupplies5">Paint and Brush Events</option>
                     </select><br><br>
                     <label for="date">Date:</label>
-                    <input type="date" id="date"><br><br>
+                    <input type="date" id="date" required><br><br>
                     <h3>* Bring your own blankets and music *</h3>
                     
                     <input type="submit">
@@ -355,7 +355,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         <option value="beverages5">CocaCola Limited</option>
                     </select><br><br>
                     <label for="date">Date:</label>
-                    <input type="date" id="date"><br><br>
+                    <input type="date" id="date" required><br><br>
                     <label for="theme">Theme:</label>
                     <input type="text" id="theme" placeholder="Any theme?"><br><br>
                     
@@ -369,7 +369,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 <form action="index.php" method="GET">
                     <label for="title">Title:</label>
                     <input type="text" id="title" placeholder="Elimisha Fund"><br><br>
-                    <label for="goal">Goal:</label>
+                    <label for="goal">Goal (Kshs):</label>
                     <input type="number" id="goal" placeholder=50000><br><br>
                     <label for="type">Type:</label>
                     <label for="type">Physical</label>
@@ -387,6 +387,8 @@ document.addEventListener("DOMContentLoaded", function() {
                     </select><br><br>   
                     <label for="online">Donation Link (if online)</label>
                     <input type="text" id="online" placeholder="Enter the donation link"><br><br>
+                    <label for="date">Date (if applicable):</label>
+                    <input type="date" id="date"><br><br>
                     <label for="payment">Payment methods acceptied:</label><br><br>
                     <label for="mpesa">MPESA</label>
                     <input type="checkbox" id="mpesa"><br><br>
@@ -414,6 +416,8 @@ document.addEventListener("DOMContentLoaded", function() {
                     <input type="text" id="location" placeholder="Enter preferred location"><br><br>  
                     <label for="link">Link (if online):</label>
                     <input type="text" id="link" placeholder="Enter relevant link"><br><br> 
+                    <label for="date">Date (if applicable):</label>
+                    <input type="date" id="date"><br><br>
                     <label for="description">Additional Information:</label>
                     <textarea id="description" rows="3" cols="25" placeholder="Please describe the type of event you wish to plan, including requirements in terms of vendors and a venue"></textarea><br><br>
                     <label for="file">Upload any relevant files (invitation, design etc):</label>
