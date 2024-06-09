@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     <label for ="date">Date: </label>
                     <input type="date" id="date"><br><br>
 
-                    <button type="submit">Next</button>
+                    <input type="submit">
                     <input type="reset">
 
                 </form>

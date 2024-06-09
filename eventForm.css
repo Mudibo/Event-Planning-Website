@@ -3,3 +3,15 @@
 main{
   padding-bottom: 330px;
 }
+
+#form-container{
+  border: 2px solid black;
+  border-radius: 15px;
+  padding: 30px;
+  padding-right: 120px;
+  padding-left: 120px;
+  text-align: center;
+  font-family: playfair;
+  font-size: larger;
+  background: linear-gradient(to right, #D6E0E2, #F4EFE6);
+}
