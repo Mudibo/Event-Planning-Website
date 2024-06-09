@@ -1,10 +1,17 @@
+/* Styling*/
 @import url(events.css);
 
+
+
+/* Main formatting*/
 main{
   padding-bottom: 330px;
 }
 
-#form-container{
+
+
+/* Forms*/
+.form-content{
   border: 2px solid black;
   border-radius: 15px;
   padding: 30px;
@@ -13,5 +20,61 @@ main{
   text-align: center;
   font-family: playfair;
   font-size: larger;
-  background: linear-gradient(to right, #D6E0E2, #F4EFE6);
+}
+#weddingPoster{
+  background-image: url(Images/weddingPoster.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; 
+  border: 2px solid hsl(60, 56%, 91%);
+}
+#birthdayPoster{
+  background-image: url(Images/birthdayPoster.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; 
+}
+#corporatePoster{
+  background-image: url(Images/corporatePoster.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#concertPoster{
+  background-image: url(Images/concertPoster.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: hsl(0, 0%, 100%);
+}
+#picnicPoster{
+  background-image: url(Images/picnicPoster.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: hsl(0, 0%, 100%);
+  font-weight: bold;
+}
+#socialPoster{
+  background-image: url(Images/socialPoster.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: hsl(0, 0%, 0%);
+  border-color: hsl(0, 0%, 0%);
+}
+#fundraiserPoster{
+  background-image: url(Images/fundraiserPoster.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: hsl(0, 0%, 0%);
+}
+#otherPoster{
+  background-image: url(Images/otherPoster.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: hsl(0, 0%, 0%);
+  border: 2px solid hsl(0, 0%, 100%);
 }
