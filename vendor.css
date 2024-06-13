@@ -1,9 +1,16 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
+body{
+    margin: 0px;
+    min-height: 100vh;
+    font-family: roboto, Georgia; 
+    margin: 0px;
+    min-height: 100vh;
+    font-family: roboto, Georgia; 
+    background: url(Images/Background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+  }
 .navbar img{
     width: 150px;
     height: auto;
