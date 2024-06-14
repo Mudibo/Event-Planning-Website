@@ -1,0 +1,117 @@
+/* Global Formatting */
+@font-face{
+  font-family: roboto;
+  src: url(Fonts/Roboto-Regular.ttf);
+}
+@font-face{
+  font-family: playfair;
+  src: url(Fonts/PlayfairDisplay-Regular.ttf);
+}
+body{
+  font-family: roboto, Georgia;
+  background: url(Images/Background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+/* Navigation bar and all header information */
+.navbar img{
+  width: 150px;
+  height: auto;
+}
+.navbar{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  transition: background-color 0.3s linear, border-bottom 0.3s linear;
+  z-index:  1000;
+}
+.navbar.scrolled{
+  background-color: hsl(0, 0%, 100%);
+  border-bottom: 1.5px solid hsl(0, 0%, 0%);
+}
+.navbar img, .navbar ul, .navbar #login{
+  z-index: 1001; 
+}  
+.navbar ul{
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+.navbar a{
+  color: hsl(0, 0%, 0%);
+  font-weight: bolder;
+  text-decoration: none;
+  padding: 10px 30px;
+  display: block;
+  text-align: center;
+  transition: color 0.3s linear;
+}
+.navbar a:hover{
+  color: hsl(0, 100%, 50%);
+}
+#login{
+  font-size: 15px;
+  background-color: hsl(0, 0%, 0%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 5px;
+  border: 0px;
+  top: 10px;
+  right: 10px;
+  padding: 5px 50px;
+  transition: background-color 0.3s linear, font-weight 0.3s linear;
+}
+#login:hover{
+  background-color: hsl(0, 100%, 50%);
+}
+/* Footer information */
+.footer{
+  margin-top: 0px;
+  height: auto;
+}
+.footer{
+  background-color: rgb(255, 255, 255);
+  border: 2px solid black;
+  color: black;
+  text-align: center;
+  padding-top: 70px;
+  padding-bottom: 40px;
+}
+.footer h3{
+  color: hsl(0, 100%, 50%);
+}
+.footer ul{
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+.footer ul a{
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+  font-weight: bolder;
+  text-decoration: none;
+  padding: 10px 30px;
+  display: block;
+  text-align: center;
+}
+.footer ul a img{
+  width: 50px;
+}
+.footer ul a:hover{
+  transform: scale(1.2);
+}
+.footer #H4{
+  position: relative;
+  top: 20px;
+}
