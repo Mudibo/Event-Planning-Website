@@ -1,66 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> <!-----space between buttons----->
-    <title>Sign In</title>
-    <link rel="stylesheet" href="SignIn.css">
-    <link rel="icon" type="images" href="Icons/balloons.png">
+    <title>Login | Firebase</title>
+    <link rel="stylesheet" href="login.css">
+    <style>
+        .error {
+            color: red;
+            font-size: 0.8rem;
+            margin-top: 5px;
+            display: none; /* Hide initially */
+        }
+    </style>
 </head>
-
 <body>
-    <nav class="navbar">
-        <img src="Icons/Logo.png" alt="Logo" class="Logo">
-        <ul>
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="about.html">ABOUT US</a></li>
-            <li><a href="events.html">EVENTS</a></li>
-            <li><a href="FAQ.html">FAQ</a></li>
-            <li><a href="contacts.html">CONTACTS</a></li>
-            <li><a href="reviews.html">REVIEWS</a></li>
-        </ul>
-
-
-    
-</nav>
-
-    <div class="form-box">
-        
-        <!----login form---->
-        <div class="login-container" id="login">
-            <div class="top">
-                <span> Don't have an account? <a href="SignUp.html" onclick="login()">Sign Up</a></span>
-                <header>Login</header>
-            </div> 
-            
+    <div class="container">
+        <span> Don't have an account? <a href="SignUp.html" onclick="login()">Sign Up</a></span>
+        <h2>Login</h2>
+        <form action="" id="loginForm">
             <div class="two forms">
-                <div class="input-box">
-                    <input type="text" class="input-field" placeholder="Username or Email">
+                <div class="inputBox">
+                    <input type="email" class="input-field" id="login_emailid" placeholder="Email" />
                     <i class="bx bx-user"></i>
                 </div>
-                <div class="input-box">
-                    <input type="password" class="input-field" placeholder="Password">
+                <div class="inputBox">
+                    <input type="password" class="input-field" id="login_password" placeholder="Password" />
                     <i class="bx bx-lock-alt"></i>
                 </div>
-                <div class="input-box">
-                    <input type="submit" class="submit" value=" Sign In">
-                </div>
             </div>
+                <div class="inputBox">
+                    <button type="submit">Login</button>
+                </div>
 
-            <div class="two-col">
-                <div class="one">
-                    <input type="checkbox" id="login">
-                    <label for="login"> Remember Me</label>
+                <div class="two-col">
+                    <div class="one">
+                        <input type="checkbox" id="login">
+                        <label for="login"> Remember Me</label>
+                    </div>
+                    <div class="two">
+                        <label><a href="#">Forgot Password</a></label>
+                    </div>
                 </div>
-                <div class="two">
-                    <label><a href="#">Forgot Password</a></label>
-                </div>
-            </div>
-        
-        </div>
+        </form>
+        <div id="loginError" class="error"></div>
     </div>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1/firebase.js"></script>
+    <script src="./login.js"></script>
 </body>
 </html>
