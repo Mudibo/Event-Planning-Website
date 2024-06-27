@@ -1,21 +1,21 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-@font-face{
+
+@font-face {
     font-family: roboto;
     src: url(Fonts/Roboto-Regular.ttf);
-  }
-  @font-face{
+}
+
+@font-face {
     font-family: playfair;
     src: url(Fonts/PlayfairDisplay-Regular.ttf);
-  }
-  body{
-    margin: 0px;
-    min-height: 100vh;
-    font-family: roboto, Georgia; 
+}
+
+body {
     margin: 0px;
     min-height: 100vh;
     font-family: roboto, Georgia; 
@@ -24,19 +24,18 @@
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-  }
-  
-  
-  
-  /* Navigation bar and all header information */
-  .navbar img{
+}
+
+/* Navigation bar and all header information */
+.navbar img {
     width: 150px;
     height: auto;
     position: relative;
     top: 2px;
     left: 2px;
-  }
-  .navbar{
+}
+
+.navbar {
     position: fixed;
     top: 0;
     width: 100%;
@@ -46,23 +45,27 @@
     background-color: transparent;
     transition: background-color 0.3s linear, border-bottom 0.3s linear;
     z-index:  1000;
-  }
-  .navbar.scrolled{
+}
+
+.navbar.scrolled {
     background-color: hsl(0, 0%, 100%);
     border-bottom: 1.5px solid hsl(0, 0%, 0%);
-  }
-  .navbar img, .navbar ul, .navbar #login{
+}
+
+.navbar img, .navbar ul, .navbar #login {
     z-index: 1001; 
-  }  
-  .navbar ul{
+}
+
+.navbar ul {
     list-style-type: none;
     padding: 0px;
     margin: 0px;
     overflow: hidden;
     display: flex;
     justify-content: center;
-  }
-  .navbar a{
+}
+
+.navbar a {
     color: hsl(0, 0%, 0%);
     font-weight: bolder;
     text-decoration: none;
@@ -70,12 +73,13 @@
     display: block;
     text-align: center;
     transition: color 0.3s linear;
-  }
-  .navbar a:hover{
-    color: hsl(0, 100%, 50%);
-  }
+}
 
-.form-box{
+.navbar a:hover {
+    color: hsl(0, 100%, 50%);
+}
+
+.form-box {
     position: relative;
     display: flex;
     align-items: center;
@@ -84,35 +88,41 @@
     border: 2px solid rgb(0, 0, 0);
     z-index: 2;
 }
-.login-container{
+
+.login-container {
     transition: .5s ease-in-out;
     flex-direction: column;
 }
-.top span{
+
+.top span {
     color: rgb(0, 0, 0);
     font-size: small;
     padding: 10px 0;
     display: flex;
     justify-content: center;
 }
-.top span a{
+
+.top span a {
     font-weight: 500;
     color:  rgb(220, 20, 20);
     margin-left: 5px;
 }
-header{
+
+header {
     color: rgb(0, 0, 0);
     font-size: 30px;
     text-align: center;
     padding: 10px 0 30px 0;
 }
-.two-forms{
+
+.two-forms {
     display: flex;
     gap: 10px;
 }
-.input-field{
+
+.input-field {
     font-size: 15px;
-    background: rgb(255, 255, 255);
+    background: hsl(0, 0%, 100%);
     color: rgb(0, 0, 0);
     height: 40px;
     width: 100%;
@@ -122,20 +132,24 @@ header{
     outline: none;
     transition: .2s ease;   
 }
-.input-field:hover, .input-field:focus{
+
+.input-field:hover, .input-field:focus {
     background: rgb(255, 255, 255);
     box-shadow: 1px 5px 7px 1px hsl(225, 92%, 63%);
 }
-::-webkit-input-placeholder{
+
+::-webkit-input-placeholder {
     color: rgb(0, 0, 0);
 }
-.input-box{
+
+.input-box {
     position: relative;
     top: -15px;
     left: 20px;
     color: rgb(0, 0, 0);
 }
-.submit{
+
+.submit {
     font-size: 15px;
     font-weight: 500;
     color: white;
@@ -144,25 +158,29 @@ header{
     border: none;
     border-radius: 30px;
     outline: none;
-    background: black;
+    background: rgb(232, 40, 40);
     cursor: pointer;
     transition: .3s ease-in-out;
 }
-.submit:hover{
+
+.submit:hover {
     box-shadow: 1px 5px 7px 1px hsl(225, 92%, 63%);
 }
-.one{
+
+.one {
     display: flex;
     align-items: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-.one input{
+
+.one input {
     margin-right: 10px;
     width: 15px;
     height: 15px;
     cursor: pointer;
 }
-.two-col{
+
+.two-col {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -171,17 +189,21 @@ header{
     margin-top: 10px;
     align-items: center;
 }
+
 .two-col .one, .two-col .two {
     margin-bottom: 10px; /* Adjust spacing as needed */
     color: black;
 }
-.two label{
+
+.two label {
     text-decoration: none;
     color:rgb(0, 0, 0);
 }
-.two label a{
+
+.two label a {
     color:rgb(180, 81, 180);
 }
-.two label a:hover{
+
+.two label a:hover {
     text-decoration: none;
 }
