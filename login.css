@@ -108,8 +108,8 @@ h2{
     border: none;
     outline: none;
     background: rgb(0, 0, 0);
-    color: #1020d3;
-    font-size: 20px;
+    color: #ffffff;
+    font-size: 15px;
     font-weight: 500;
     cursor: pointer;
     border: none;
@@ -132,7 +132,7 @@ h2{
 }
 .input-field{
     font-size: 15px;
-    background: purple;
+    background: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
     height: 40px;
     width: 100%;
