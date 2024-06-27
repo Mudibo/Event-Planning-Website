@@ -1,77 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> <!-----space between buttons----->
-    <title>Sign Up</title>
-    <link rel="stylesheet" href="SignUp.css">
+    <title>Signup | Firebase</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="images" href="Icons/balloons.png">
 </head>
-
 <body>
-    <nav class="navbar">
-            <img src="Icons/Logo.png" alt="Logo" class="Logo">
-            <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="about.html">ABOUT US</a></li>
-                <li><a href="events.html">EVENTS</a></li>
-                <li><a href="FAQ.html">FAQ</a></li>
-                <li><a href="contacts.html">CONTACTS</a></li>
-                <li><a href="reviews.html">REVIEWS</a></li>
-            </ul>
-    
-
-        
-    </nav>
-
-<!--------------------Form box------------------------->
-    <div class="form-box">
-        
-
-        <!----registration form---->
-        <div class="register-container" id="register">
-            <div class="top">
-                <span> Have an account? <a href="SignIn.html" onclick="login()">Login</a></span>
-                <header>Register</header>
-            </div>
+    <div class="container">
+        <span> Have an account? <a href="SignIn.html" onclick="login()">Login</a></span>
+        <h2>Sign Up</h2>
+        <form action="" id="signupForm">
+            <div class="alert">Your message sent</div>
             <div class="two-forms">
-                <div class="input-box">
-                    <input type="text" class="input-field" placeholder="Firstname">
+                <div class="inputBox">
+                    <input type="text" class="input-field" id="name" placeholder="Firstname" />
                     <i class="bx bx-user"></i>
                 </div>
-                <div class="input-box">
-                    <input type="text" class="input-field" placeholder="Lastname">
+                <div class="inputBox">
+                    <input type="text" class="input-field" id="lname" placeholder="Lastname" />
                     <i class="bx bx-user"></i>
                 </div>
-                
             </div>
-            <div class="input-box">
-                <input type="text" class="input-field" placeholder="Email">
-                <i class="bx bx-envelope"></i>
-            </div>
-            <div class="input-box">
-                <input type="password" class="input-field" placeholder="Password">
-                <i class="bx bx-lock-alt"></i>
-            </div>
-            <div class="input-box">
-                <input type="submit" class="submit" value="Register">
-            </div>
-            
-            <div class="two-col">
-                <div class="one">
-                    <input type="checkbox" id="register-check">
-                    <label for="register-check"> Remember Me</label>
+                <div class="inputBox">
+                    <input type="email" class="input-field" id="emailid" placeholder="Email" />
+                    <i class="bx bx-envelope"></i>
                 </div>
-                <div class="two">
-                    <input type="checkbox" id="agreement">
-                    <label for="agreement" class="terms-label">I agree to these <a href="#">Terms & conditions</a></label>
+                <div class="inputBox">
+                    <input type="password" class="input-field" id="password" placeholder="Password" />
+                    <i class="bx bx-lock-alt"></i>
                 </div>
-            </div>
-        </div>
+                <div class="inputBox">
+                    <button type="submit">Submit</button>
+                </div>
 
-        
+                <div class="two-col">
+                    <div class="one">
+                        <input type="checkbox" id="register-check">
+                        <label for="register-check"> Remember Me</label>
+                    </div>
+                    <div class="two">
+                        <input type="checkbox" id="agreement">
+                        <label for="agreement" class="terms-label">I agree to these <a href="#">Terms & conditions</a></label>
+                    </div>
+                </div>
+        </form>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1/firebase.js"></script>
+    <script src="./signup.js"></script>
 </body>
 </html>
