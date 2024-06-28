@@ -30,11 +30,13 @@ function login(e) {
                 var user = childSnapshot.val();
                 if (user.password === password) {
                     loggedIn = true;
+                    // Store the email in local storage
+                    localStorage.setItem("userEmail", emailid);
                 }
             });
             if (loggedIn) {
                 // Redirect to FAQ.html after successful login
-                window.location.href = "FAQ.html";
+                window.location.href = "profile.html";
             } else {
                 displayError("Login failed. Please check your credentials.");
             }
