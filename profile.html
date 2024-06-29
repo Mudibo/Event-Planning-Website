@@ -34,8 +34,11 @@
         <div class="rightbox">
             <div class="profile tabShow">
                 <h1>Personal Info</h1>
-                <h2>Full name</h2>
-                <input type="text" class="input" value="">
+                <h2>name</h2>
+                <input type="text" id="profileName" class="input" value="">
+                <h2>lname</h2>
+                <input type="text" id="profileLname" class="input" value="">
+
 
                 <h2>Birthday</h2>
                 <input type="text" class="input" value="April 26, 2004">
@@ -44,7 +47,7 @@
                 <input type="text" class="input" value="Female">
 
                 <h2>Email</h2>
-                <input type="text" class="input" value="">
+                <input type="text" id="profileEmail" class="input" value="">
 
                 <h2>Password</h2>
                 <input type="password" class="input" value="">
@@ -54,16 +57,17 @@
             <div class="Event tabShow">
                 <h1>Events Info</h1>
                 <h2>Event Preferences</h2>
-                <ul class="link">
-                    <li>Wedding Ceremony</li>
-                    <li>Birthday Party</li>
-                    <li>Corporate Event</li>
-                    <li>Concert</li>
-                    <li>Paint and sip/Picnic</li>
-                    <li>Social Gathering</li>
-                    <li>Fundraiser</li>
-                    <li>Others</li>
-                </ul>
+                <select class="events" id="event-type">
+                    <option value="">Select an event type</option>
+                    <option value="Wedding Ceremony">Wedding Ceremony</option>
+                    <option value="Birthday Party">Birthday Party</option>
+                    <option value="Corporate Event">Corporate Event</option>
+                    <option value="Concert">Concert</option>
+                    <option value="Paint and sip/Picnic">Paint and sip/Picnic</option>
+                    <option value="Social Gathering">Social Gathering</option>
+                    <option value="Fundraiser">Fundraiser</option>
+                    <option value="Others">Others</option>
+                  </select>
                 <input type="text" class="input">
 
                 <h2>Feedbacks</h2>
@@ -86,7 +90,7 @@
                 <input type="text" class="input" value="Jan 20, 2012">
 
                 <h2>Redeem Card </h2>
-                <input type="password" class="input" value="km">
+                <input type="password" id="profilePassword" class="input" value="km">
                 <button class="btn">Update</button>
             </div>
 

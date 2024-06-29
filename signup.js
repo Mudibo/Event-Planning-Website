@@ -27,7 +27,7 @@ function submitForm(e) {
     saveMessages(lname, name, emailid, password);
 
     // Redirect to FAQ.html after signup
-    window.location.href = "FAQ.html";
+    window.location.href = "profile.html";
 }
 
 const saveMessages = (lname, name, emailid, password) => {

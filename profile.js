@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     document.getElementById("profileName").value = user.name;
                     document.getElementById("profileLname").value = user.lname;
                     document.getElementById("profileEmail").value = user.emailid;
+                    document.querySelector("input[type='password']").value = user.password; 
                 });
             } else {
                 displayError("User data not found.");
@@ -57,14 +58,21 @@ $(".tab").click(function() {
 })
 
 //For the event option
-    const input = document.querySelector("#search");
-    const list = document.querySelectorAll("#link li");
+const list = document.querySelectorAll(".link li");
+const select = document.createElement("select");
+select.id = "event-type";
 
-    input.addEventListener('input', function() {
-        const filter = input.value.toUpperCase();
+const defaultOption = document.createElement("option");
+defaultOption.value = "";
+defaultOption.text = "Select an event type";
+select.appendChild(defaultOption);
 
-    link.forEach((item) => {
-        const text = el.textContent.toUpperCase();
-        item.style.display = text.includes(filter) ? "block" : "none";
-    });
+list.forEach((item) => {
+  const option = document.createElement("option");
+  option.value = item.textContent;
+  option.text = item.textContent;
+  select.appendChild(option);
 });
+
+// Replace the original ul element with the select element
+document.querySelector(".link").replaceWith(select);
