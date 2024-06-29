@@ -3,39 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css' rel='stylesheet'> <!-- Font Awesome -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> <!-- Boxicons -->
     <link rel="stylesheet" href="profile.css">
-    <link rel="icon" type="images" href="Icons/balloons.png">
+    <title>Profile</title>
 </head>
 <body>
 
-    <nav class="navbar">
-        <img src="Icons/Logo.png" alt="Logo" class="Logo">
-        <ul>
-          <li><a href="about.html">ABOUT US</a></li>
-          <li><a href="contacts.html">CONTACT US</a></li>
-          <li><a href="vendor.html">VENDORS</a></li>
-          <li><a href="events.html">EVENTS</a></li>
-          <li><a href="FAQ.html">FAQs</a></li>
-          <li><a href="reviews.html">REVIEWS</a></li>
-        </ul>
-    </nav>
-
-
     <div class="container">
-        <h2>Profile</h2>
-        <div class="name" id="profileInfo">
-            <p>Name: <span class="field" id="profileName"></span</p>
-        </div>
-        <div class="name" id="profileInfo">
-            <p>Last Name: <span class="field" id="profileLname"></span></p>
-        </div>
-        <div class="name" id="profileInfo">
-            <p>Email: <span class="field" id="profileEmail"></span></p>
+        <div class="leftbox">
+            <nav>
+                <a onclick="tabs(0)" class="tab active">
+                    <i class="fa fa-user"></i>
+                </a>
+                <a onclick="tabs(1)" class="tab">
+                    <i class="fa fa-tv"></i>
+                </a>
+                <a onclick="tabs(2)" class="tab">
+                    <i class="fa fa-credit-card"></i>
+                </a>
+                <a onclick="tabs(3)" class="tab">
+                    <i class="fa fa-tasks"></i>
+                </a>
+                <a onclick="tabs(4)" class="tab">
+                    <i class="fa fa-cog"></i>
+                </a>
+            </nav>
         </div>
 
-        <div id="profileError" style="display:none; color: red;"></div>
+        <div class="rightbox">
+            <div class="profile tabShow">
+                <h1>Personal Info</h1>
+                <h2>Full name</h2>
+                <input type="text" class="input" value="">
+
+                <h2>Birthday</h2>
+                <input type="text" class="input" value="April 26, 2004">
+
+                <h2>Gender</h2>
+                <input type="text" class="input" value="Female">
+
+                <h2>Email</h2>
+                <input type="text" class="input" value="">
+
+                <h2>Password</h2>
+                <input type="password" class="input" value="">
+                <button class="btn">Update</button>
+            </div>
+
+            <div class="Event tabShow">
+                <h1>Events Info</h1>
+                <h2>Event Preferences</h2>
+                <ul class="link">
+                    <li>Wedding Ceremony</li>
+                    <li>Birthday Party</li>
+                    <li>Corporate Event</li>
+                    <li>Concert</li>
+                    <li>Paint and sip/Picnic</li>
+                    <li>Social Gathering</li>
+                    <li>Fundraiser</li>
+                    <li>Others</li>
+                </ul>
+                <input type="text" class="input">
+
+                <h2>Feedbacks</h2>
+                <input type="text" class="input" >
+                <button class="btn">Update</button>
+            </div>
+
+            <div class="payment tabShow">
+                <h1>Payment Info</h1>
+                <h2>Payment Method</h2>
+                <input type="text" class="input" value="MaterCard - 0202 ****** 1234">
+
+                <h2>Billing Address</h2>
+                <input type="text" class="input" value="1234 street, Nairobi">
+
+                <h2>ZipCode</h2>
+                <input type="text" class="input" value="12345 00100">
+
+                <h2>Billing Data</h2>
+                <input type="text" class="input" value="Jan 20, 2012">
+
+                <h2>Redeem Card </h2>
+                <input type="password" class="input" value="km">
+                <button class="btn">Update</button>
+            </div>
+
+            <div class="privacy tabShow">
+                <h1>Privacy Settings </h1>
+                <h2>Manage Email Notificatons</h2>
+                <p></p>
+                <h2>Manage Privacy Settings</h2>
+                <p></p>
+                <h2>Personalized Ad Experience</h2>
+                <h2>Protect Account</h2>
+
+                <button class="btn">Update</button>
+            </div>
+
+            <div class="settings tabShow">
+                <h1>Account Settings </h1>
+                <h2>Hold Subscription</h2>
+                <p></p>
+                <h2>Cancel Subscription</h2>
+                <p></p>
+
+                <button class="btn">Update</button>
+            </div>
+        </div>
     </div>
+
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1/firebase.js"></script>
     <script src="./profile.js"></script>
 </body>

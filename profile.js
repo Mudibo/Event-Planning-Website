@@ -21,9 +21,9 @@ document.addEventListener("DOMContentLoaded", function() {
             if (snapshot.exists()) {
                 snapshot.forEach(function(childSnapshot) {
                     var user = childSnapshot.val();
-                    document.getElementById("profileName").innerText = user.name;
-                    document.getElementById("profileLname").innerText = user.lname;
-                    document.getElementById("profileEmail").innerText = user.emailid;
+                    document.getElementById("profileName").value = user.name;
+                    document.getElementById("profileLname").value = user.lname;
+                    document.getElementById("profileEmail").value = user.emailid;
                 });
             } else {
                 displayError("User data not found.");
@@ -39,3 +39,32 @@ function displayError(message) {
     errorBox.innerText = message;
     errorBox.style.display = "block";
 }
+
+// For the info
+const tabBtn = document.querySelectorAll(".tab");
+const tab = document.querySelectorAll(".tabShow");
+
+function tabs(panelIndex) {
+    tab.forEach(function(node) {
+        node.style.display = "none";
+    });
+    tab[panelIndex].style.display = "block";
+}
+tabs(0);
+
+$(".tab").click(function() {
+    $(this).addClass("active").siblings().removeClass("active");
+})
+
+//For the event option
+    const input = document.querySelector("#search");
+    const list = document.querySelectorAll("#link li");
+
+    input.addEventListener('input', function() {
+        const filter = input.value.toUpperCase();
+
+    link.forEach((item) => {
+        const text = el.textContent.toUpperCase();
+        item.style.display = text.includes(filter) ? "block" : "none";
+    });
+});

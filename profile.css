@@ -1,9 +1,3 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
 /* Global Formatting */
 @font-face{
     font-family: roboto;
@@ -18,111 +12,100 @@ body{
     min-height: 100vh;
     font-family: roboto, Georgia; 
     margin: 0px;
-    font-family: roboto, Georgia; 
-    background: url(Images/Background.jpg);
+    min-height: 100vh;
+    font-family: roboto, Georgia;   
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    overflow-x: hidden;
 }
-/* Navigation bar and all header information */
-.navbar img{
-    width: 150px;
-    height: auto;
+  
+.container {
+    background: rgb(255, 255, 255);
+    width: 540px;
+    height: 450px; 
+    margin: 0 auto;
+    position: relative;
+    margin-top: 10%;
+    box-shadow: 2px 5px 20px rgb(40, 40, 42);
 }
-.navbar{
-    position: fixed;
-    top: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: transparent;
-    transition: background-color 0.3s linear, border-bottom 0.3s linear;
-    z-index:  1000;
+.leftbox {
+    float: left;
+    top: -5%;
+    left: 5%;
+    position: absolute;
+    width: 15%;
+    height: 110%;
+    background: rgb(74, 185, 228);
+    box-shadow: 3px 3px 10px rgb(255, 255, 255);
 }
-.navbar.scrolled{
-    background-color: hsl(0, 0%, 100%);
-    border-bottom: 1.5px solid hsl(0, 0%, 0%);
-}
-.navbar img, .navbar ul, .navbar #login{
-    z-index: 1001; 
-}  
-.navbar ul{
-    list-style-type: none;
-    padding: 0px;
-    margin: 0px;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-}
-.navbar a{
-    color: hsl(0, 0%, 0%);
-    font-weight: bolder;
-    text-decoration: none;
-    padding: 10px 30px;
+nav a {
+    list-style: none;
+    padding: 35px;
+    color: rgb(0, 0, 0);
+    font-size: 1.1em;
     display: block;
-    text-align: center;
-    transition: color 0.3s linear;
+    transition: all .3s ease-in-out;
 }
-.navbar a:hover{
-    color: hsl(0, 100%, 50%);
-}
-
-h2{
-    color: rgb(0, 0, 0);
-    font-size: 30px;
-    text-align: center;
-    padding: 10px 0 30px 0;
-}
-.container{
-    transition: .5s ease-in-out;
-    flex-direction: column;
-   
-}
-.container form{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
-}
-.name {
-    width: 100%;    
-    height: 40px;
-    padding: 10px 20px;
-    border: none;
-    outline: none;
-    background: rgb(0, 0, 0);
-    color: #ffffff;
-    font-size: 15px;
-    font-weight: 500;
+nav a:hover {
+    color: grey;
     cursor: pointer;
-    border: none;
-    border-radius: 30px;
-    transition: .3s ease-in-out;
+    transform: scale(1.2);
 }
-.field{
-    font-size: 15px;
-    background: rgb(255, 255, 255);
+nav a:first-child {
+    margin-top: 7px;
+}
+nav a:active {
+    color: gray;
+}
+.rightbox {
+    width: 60%;
+    margin-left: 27%;
+}
+.tabShow {
+    transition: all .5s ease-in;
+    width: 80%;
+}
+h1 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: rgb(0, 0, 0);
-    height: 40px;
-    width: 100%;
-    padding: 0 10px 0 45px;
-    border: none;
-    border-radius: 30px;
+    margin-top: 40px;
+    margin-bottom: 35px;
+}
+h2 {
+    color: #777;
+    text-transform: uppercase;
+    font-size: 8px;
+    letter-spacing: 1px;
+    margin-left: 2px;
+    margin-top: 10px;
+}
+.input, p {
+    border: 0;
+    border-bottom: 1px solid #3fb6a8;
+    width: 80%;
+    font-size: .7em;
+    padding: 7px 0;
+    color: #070707;
     outline: none;
-    transition: .2s ease;
 }
-.field:hover, .field:focus{
-    background: rgb(255, 255, 255);
-    box-shadow: 1px 5px 7px 1px hsl(225, 92%, 63%);
+span {
+    font-size: .7em;
+    color: #777; 
 }
-::-webkit-field-placeholder{
+.btn {
+    text-transform: uppercase;
+    font-size: 15px;
+    border: 0;
+    color: #000000;
+    padding: 7px 15px;
+    box-shadow: 0pc 2px 4px 0px black;
+    cursor: pointer;
+    margin-top: 15px;
+} 
+.link {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: small;
     color: rgb(0, 0, 0);
 }
