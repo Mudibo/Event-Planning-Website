@@ -115,25 +115,6 @@ h2{
     display: flex;
     gap: 10px;
 }
-.input-field{
-    height: 40px;
-    width: 100%;
-    background-color: hsl(0, 0%, 100%);
-    color: hsl(0, 0%, 0%);
-    border-radius: 5px;
-    border: 0px;
-    top: 10px;
-    right: 10px;
-    padding: 5px 50px;
-    transition: background-color 0.3s linear, font-weight 0.3s linear;
-}
-.input-field:hover, .input-field:focus{
-    background: rgb(255, 255, 255);
-    box-shadow: 1px 5px 7px 1px hsl(225, 92%, 63%);
-}
-::-webkit-input-placeholder{
-    color: rgb(0, 0, 0);
-}
 .one{
     display: flex;
     align-items: center;
