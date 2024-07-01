@@ -109,11 +109,9 @@ h2{
     outline: none;
     background: rgb(0, 0, 0);
     color: #ffffff;
-    font-size: 15px;
-    font-weight: 500;
     cursor: pointer;
     border: none;
-    border-radius: 30px;
+    border-radius: 10px;
     transition: .3s ease-in-out;
 }
 .alert{
@@ -131,16 +129,16 @@ h2{
     gap: 10px;
 }
 .input-field{
-    font-size: 15px;
-    background: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
     height: 40px;
     width: 100%;
-    padding: 0 10px 0 45px;
-    border: none;
-    border-radius: 30px;
-    outline: none;
-    transition: .2s ease;
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 0%);
+    border-radius: 5px;
+    border: 0px;
+    top: 10px;
+    right: 10px;
+    padding: 5px 50px;
+    transition: background-color 0.3s linear, font-weight 0.3s linear;
 }
 .input-field:hover, .input-field:focus{
     background: rgb(255, 255, 255);
