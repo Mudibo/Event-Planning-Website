@@ -1,38 +1,85 @@
-.App {
-  text-align: center;
+/*About body styling */
+.about-summary {
+  display:flex;
+  flex-wrap: wrap;
+  justify-content:center;  
+  padding:20px; 
+  margin:0;
+}
+.who-we-are,
+.our-story,
+.what-we-do,
+.why-choose-us,
+.create-something {
+  flex: 1 1 300px; /* Example flex settings; adjust as needed */
+  margin: 20px;
+  padding: 10px;
+  border: 2px solid;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  color: black;
+}
+.what-we-do:hover,
+.who-we-are:hover,
+.our-story:hover {
+color:red;
+}
+.what-we-do:hover h2,
+.our-story:hover h2,
+.who-we-are:hover h2,
+.who-we-are:hover p,
+.our-story:hover p,
+.what-we-do:hover p{
+color:black;
+}
+.why-choose-us h2,
+.create-something h2{
+color:black;
+ }
+.why-choose-us p,
+.create-something p{
+color:black;
+}
+.why-choose-us:hover h2,
+.create-something:hover h2{
+color:black;
+}
+.why-choose-us:hover p,
+.create-something:hover p{
+color:black;
+}
+.why-choose-us:hover,
+.create-something:hover{
+color:red;
+}
+p{
+  font-size:medium;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.profile-images{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr 1fr;
+  gap:2px;
+  justify-items: center;           
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.img {
+  width:210px;
+  height:210px;
+  border-radius:10px;
+  transition:transform 0.3s ease;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.profile-images .contributors {
+  margin:5px;
+  text-align:center;
 }
-
-.App-link {
-  color: #61dafb;
+.contributors {
+  border:2px solid black;
+  border-radius:20px;
+  padding:0;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+.profile-images .contributors:hover{
+  color:red;
+  transform:scale(1.05);
+  transition:0.3s ease-in;
+} 
