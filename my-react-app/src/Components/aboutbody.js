@@ -56,7 +56,7 @@ const About = () => {
                 </div>
     
                 <div id="contributors" className="contributors">
-                    <p>Mathenge Gitahi, Director</p>
+                    <p>Mathenge Gitahi, Director.</p>
                     <img src={Mathenge} alt="Mathenge Gitahi" className="img"/>
                     <p>"Let us handle the logistics so you can focus on having a memorable experience"</p>
                 </div>  

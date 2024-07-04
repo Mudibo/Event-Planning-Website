@@ -10,7 +10,7 @@
 .our-story,
 .what-we-do,
 .why-choose-us,
-.create-something {
+.create-something{
   flex: 1 1 300px; /* Example flex settings; adjust as needed */
   margin: 20px;
   padding: 10px;
