@@ -84,3 +84,38 @@ p{
   transition:0.3s ease-in;
 } 
 /*End of the about body styling*/
+
+/*Footer styling */
+.footer2{
+  width: 100%;
+  background-color: hsl(0, 0%, 0%);
+  color: hsl(0, 0%, 100%);
+  text-align: center;
+  padding: 20px 0px; 
+  position: relative; 
+  bottom: 0px; 
+}
+.footer2 ul{
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+}
+.footer2 ul a{
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+  font-weight: bold;
+  padding: 10px 30px;
+  display: block;
+  text-align: center;
+}
+.footer2 ul a img{
+  width: 50px;
+}
+.footer2 ul a:hover{
+  transform: scale(1.2);
+}
+.footer2 h3{
+  color: hsl(0, 100%, 50%);
+}
