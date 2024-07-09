@@ -8,11 +8,11 @@ import Footer from './Components/Footer';
 function App() {
   return (
     <Router>
-   
+      <Header/>
       <Routes>
         <Route path="/about" element={<AboutPage />}/>
       </Routes>
-     
+      <Footer/>
     </Router>
    
   );
