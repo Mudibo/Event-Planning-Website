@@ -3,7 +3,7 @@ import Krishna from '../Images/Krishna.jpeg';
 import Sean from '../Images/sean.jpg';
 import Mathenge from '../Images/mathengeCropped.jpg'
 
-const About = () => {
+const AboutBody = () => {
     return (
         <div id="about-summary" className="about-summary">
             
@@ -65,4 +65,4 @@ const About = () => {
         </div>
     )
 }
-export default About;
+export default AboutBody;

@@ -1,3 +1,37 @@
+/*Header Styling */
+.navbar{
+  display: flex;
+  align-items:center;
+  background-color: transparent;
+  transition: background-color 0.3s linear, border-bottom 0.3s linear; 
+}
+.navbar img{
+  width: 100px;
+  height: auto;
+  margin-right:0;
+  display:flex;
+}
+.navbar ul{
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+.navbar a{
+  color: hsl(0, 0%, 0%);
+  font-weight: bolder;
+  text-decoration: none;
+  padding: 10px 30px;
+  display: block;
+  text-align: center;
+  transition: color 0.3s linear;
+}
+.navbar a:hover{
+  color: hsl(0, 100%, 50%);
+}
+
 /*About body styling */
 .about-summary {
   display:flex;

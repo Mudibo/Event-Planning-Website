@@ -1,18 +1,32 @@
 //Header component
+import React from 'react';
 import Logo from '../Icons/Logo.png';
+import {Link} from 'react-router-dom';
 const Header = () => {
     return (
-    <div class="navbar">
-        <img src={Logo} alt="Logo" class="Logo"/>
+    <div className="navbar">
+        <img src={Logo} alt="Logo" className="Logo"/>
         <ul>
-            <li><a href="about.html">ABOUT US</a></li>
-            <li><a href="contacts.html">CONTACT US</a></li>
-            <li><a href="vendor.html">VENDORS</a></li>
-            <li><a href="events.html">EVENTS</a></li>
-            <li><a href="FAQ.html">FAQs</a></li>
-            <li><a href="reviews.html">REVIEWS</a></li>
+            <li>
+                <Link to="/about">ABOUT US</Link>
+            </li>
+            <li>
+                <Link to="/contacts">CONTACT US</Link>
+            </li>
+            <li>
+                <Link to="/vendor">VENDORS</Link>
+            </li>
+            <li>
+                <Link to="/events">EVENTS</Link>
+            </li>
+            <li>
+                <Link to="/faq">FAQs</Link>
+            </li>
+            <li>
+                <Link to="/reviews">REVIEWS</Link>
+            </li>
         </ul>
-        <a href="SignIn.html"><button id="login">Login</button></a>
+        <Link to="/signin"><button id="login">Login</button></Link>
   </div>
     )
 }
