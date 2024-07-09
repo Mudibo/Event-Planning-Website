@@ -22,7 +22,7 @@ const Login = () => {
       <span>Don't have an account? <a href="SignUp.html">Sign Up</a></span>
       <h2>Login</h2>
       <form onSubmit={handleSubmit}>
-        <div className="two forms">
+        
           <div className="inputBox">
             <input
               type="email"
@@ -45,7 +45,7 @@ const Login = () => {
             />
             <i className="bx bx-lock-alt"></i>
           </div>
-        </div>
+        
         <div className="inputBox">
           <button type="submit">Login</button>
         </div>
