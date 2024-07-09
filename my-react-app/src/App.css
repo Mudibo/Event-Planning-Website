@@ -1,3 +1,62 @@
+/* Start of Header */
+.navbar img{
+  width: 150px;
+  height: auto;
+}
+.navbar{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  transition: background-color 0.3s linear, border-bottom 0.3s linear;
+  z-index:  1000;
+}
+.navbar.scrolled{
+  background-color: hsl(0, 0%, 100%);
+  border-bottom: 1.5px solid hsl(0, 0%, 0%);
+}
+.navbar img, .navbar ul, .navbar #login{
+  z-index: 1001; 
+}  
+.navbar ul{
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+.navbar a{
+  color: hsl(0, 0%, 0%);
+  font-weight: bolder;
+  text-decoration: none;
+  padding: 10px 30px;
+  display: block;
+  text-align: center;
+  transition: color 0.3s linear;
+}
+.navbar a:hover{
+  color: hsl(0, 100%, 50%);
+}
+#login{
+  font-size: 15px;
+  background-color: hsl(0, 0%, 0%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 5px;
+  border: 0px;
+  top: 10px;
+  right: 10px;
+  padding: 5px 50px;
+  transition: background-color 0.3s linear, font-weight 0.3s linear;
+}
+#login:hover{
+  background-color: hsl(0, 100%, 50%);
+}
+/* End of Header */
+
 /*About body styling */
 .about-summary {
   display:flex;
