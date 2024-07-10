@@ -8,6 +8,9 @@ const Header = () => {
         <img src={Logo} alt="Logo" className="Logo"/>
         <ul>
             <li>
+                <Link to = "/home">HOME</Link>
+            </li>
+            <li>
                 <Link to="/about">ABOUT US</Link>
             </li>
             <li>
