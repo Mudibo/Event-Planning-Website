@@ -1,8 +1,10 @@
 //Home page
 import HomeBody from '../Components/homebody';
-const homePage = () => {
+const HomePage = () => {
     return(
-        <HomeBody/>
+        <div>
+            <HomeBody/>
+        </div>
     )
 }
-export default homePage;
+export default HomePage;

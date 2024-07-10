@@ -119,6 +119,183 @@ p{
 } 
 /*End of the about body styling*/
 
+/* Styling of the body of home page*/
+.homebody{
+  margin: 0px;
+  min-height: 100vh;
+  font-family: roboto, Georgia; 
+  margin: 0px;
+  min-height: 100vh;
+  font-family: roboto, Georgia; 
+  /*background: url(Images/Background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;*/
+}
+.main-content2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+  box-sizing: border-box;
+  border-radius: 25px;
+  background: linear-gradient(to right, whitesmoke, beige);
+  margin: 100px;
+}
+.main-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin-top: 60px;
+}
+.text{
+  max-width: 50%;
+  margin-left: 30px;
+  margin-top: 0px;
+}
+.peopleSmilingSafariRally{
+  width: 500px; 
+  height: 500px; 
+  border-radius: 50%;
+  object-fit: cover; 
+}
+#getStarted{
+  font-size: 17px;
+  background-color: hsl(0, 0%, 0%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 5px;
+  padding: 10px 50px;
+  margin-top: 25px;
+  border: 0px;
+  transition: background-color 0.3s linear;
+}
+#getStarted:hover{
+  background-color: hsl(0, 100%, 50%);
+}
+.quote{
+  width: 120px;
+  height: auto;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-family: playfair;
+}
+.testimonial{
+  font-size: 22px;
+  max-width: 800px;
+  margin-bottom: 60px;
+}
+.elon{
+  position: relative;
+  width: 100px; 
+  height: 100px; 
+  border-radius: 50%;
+  object-fit: cover; 
+  left: -50px;
+}
+#name, #position, #company{
+  position: relative;
+  padding: 0px;
+  margin: 0px;
+  margin-top: 0px;
+  left: 45px;
+  top: -80px;
+}
+#position{
+  left: 23px;
+}
+#company{
+  left: 27px;
+}
+.main-content3{
+  height: 100vh;
+}
+.content3{
+  display: flex;
+  justify-content: center;
+}
+.factor{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 45px;
+  padding-bottom: 10px;
+  max-width: 300px;
+  border: 2px solid black;
+  border-radius: 25px;
+  margin-right: 20px;
+  margin-bottom: 40px;
+  background: hsl(225, 92%, 63%);
+  transition: border-color 0.3s linear;
+}
+.factor:hover{
+  border-color: white;
+  animation: move 0.5s linear;
+}
+@keyframes move{
+  50%{transform:translateY(20px)}
+}
+.factor img{
+  width: 130px;
+  height: auto;
+}
+.factor .description{
+  padding-top: 20px;
+  font-size: 23px;
+  text-align: center;
+  color: white;
+}
+.factor .deeperdescription{
+  word-spacing: 5px;
+  padding-top: 20px;
+  padding-bottom: 60px;
+  font-size: 17px;
+  text-align: center;
+  color: white;
+}
+.main-content3 h2{
+  font-size: 40px;
+  color: hsl(0, 0%, 0%);
+  text-align: center;
+}
+
+.main-content4{
+  height: auto;
+  background-color: black;
+}
+.main-content4 h2{
+  font-size: 70px;
+  color: hsl(0, 0%, 100%);
+  text-align: center;
+}
+.content4{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.content4 img{
+  width: 600px;
+  height: auto;
+  padding-bottom: 20px;
+  transition: transform 0.5s ease-in-out;
+}
+.content4 img:hover{
+  transform: scale(1.05);
+}
+
+/* End of styling of the home page*/
+
 /*Footer styling */
 .footer2{
   width: 100%;
@@ -153,3 +330,4 @@ p{
 .footer2 h3{
   color: hsl(0, 100%, 50%);
 }
+/*End of footer styling */
