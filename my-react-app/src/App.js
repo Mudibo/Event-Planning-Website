@@ -7,6 +7,8 @@ import AboutPage from './Pages/about';
 import Footer from './Components/Footer';
 import HomePage from './Pages/home';
 import ReviewPage from './Pages/reviews';
+import Login from './Components/login';
+
 function App() {
   return (
     <Router>
@@ -14,7 +16,9 @@ function App() {
       <Routes>
         <Route path="/about" element={<AboutPage />}/>
         <Route path="/home" element={<HomePage />}/>
-        <Route path="/reviews" element={<ReviewPage/>}/>
+        <Route path="/login" Component={Login} />
+        <Route path="/reviews" element={<ReviewPage/>} />
+
       </Routes>
       <Footer/>
     </Router>
