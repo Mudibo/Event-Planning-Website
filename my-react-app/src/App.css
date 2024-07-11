@@ -31,6 +31,20 @@
 .navbar a:hover{
   color: hsl(0, 100%, 50%);
 }
+#login{
+  font-size: 15px;
+  background-color: hsl(0, 0%, 0%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 5px;
+  border: 0px;
+  top: 10px;
+  right: 10px;
+  padding: 5px 50px;
+  transition: background-color 0.3s linear, font-weight 0.3s linear;
+}
+#login:hover{
+  background-color: hsl(0, 100%, 50%);
+}
 
 /*About body styling */
 .about-summary {
@@ -295,6 +309,108 @@ p{
 }
 
 /* End of styling of the home page*/
+
+/*Styling of the review page */
+.reviews {
+  margin-top:2rem;
+}
+.reviews h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.review {
+  background-color: white;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.review h3 {
+  margin-top: 0;
+}
+
+.review p {
+  margin: 0.5rem 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 2rem;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+input#name {
+  margin-top: 80px; /* Adjust this value as needed */
+  margin-left:-50px;
+  margin-right:40px;
+  margin-bottom:0;
+  padding:20px;
+  width:90%;
+  font-size:15px;
+}
+input#review {
+  font-size:20px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom:0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+label {
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+input, select, textarea {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+input[type="submit"] {
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 15px;
+  font-size: 16px;
+}
+ul {
+  list-style-type: none; /* Remove bullets from the list */
+  padding: 0; /* Remove default padding */
+}
+
+input[type="submit"]:hover {
+  background-color: #4cae4c;
+}
+@media (max-width: 600px){
+  .container {
+    width:95%;
+    padding:15px;
+  }
+  input[type="submit"]{
+    padding:10px;
+    font-size:14px;
+  }
+}
+
+/*End of styling of review page */
 
 /*Footer styling */
 .footer2{
