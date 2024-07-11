@@ -1,11 +1,11 @@
-//Login page
+//SignUp page
 import React, {useState} from 'react';
 
-const Login = () => {
+const SignUp = () => {
     return(
         <div>
-            <Login/>
+            <SignUp/>
         </div>
     )
 }
-export default Login;
+export default SignUp;

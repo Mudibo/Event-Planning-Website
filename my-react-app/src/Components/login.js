@@ -19,7 +19,7 @@ const Login = () => {
 
   return (
     <div className="container">
-      <span>Don't have an account? <a href="SignUp.html">Sign Up</a></span>
+      <span>Don't have an account? <a href="/signup">Sign Up</a></span>
       <h2>Login</h2>
       <form onSubmit={handleSubmit}>
         

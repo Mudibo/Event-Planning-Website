@@ -8,6 +8,7 @@ import Footer from './Components/Footer';
 import HomePage from './Pages/home';
 import ReviewPage from './Pages/reviews';
 import Login from './Components/login';
+import SignUp from './Components/signup';
 
 function App() {
   return (
