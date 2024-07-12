@@ -3,7 +3,8 @@
   display: flex;
   align-items:center;
   background-color: transparent;
-  transition: background-color 0.3s linear, border-bottom 0.3s linear; 
+  transition: background-color 0.3s linear, border-bottom 0.3s linear;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
 }
 .navbar img{
   width: 100px;
@@ -27,13 +28,14 @@
   display: block;
   text-align: center;
   transition: color 0.3s linear;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .navbar a:hover{
   color: hsl(0, 100%, 50%);
 }
 
 /*About  styling */
-.about-summary {
+/*.about-summary {
   display:flex;
   flex-wrap: wrap;
   justify-content:center;  
@@ -45,7 +47,7 @@
 .what-we-do,
 .why-choose-us,
 .create-something{
-  flex: 1 1 300px; /* Example flex settings; adjust as needed */
+  flex: 1 1 300px; 
   margin: 20px;
   padding: 10px;
   border: 2px solid;
@@ -70,10 +72,12 @@ color:black;
 .why-choose-us h2,
 .create-something h2{
 color:black;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
  }
 .why-choose-us p,
 .create-something p{
 color:black;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .why-choose-us:hover h2,
 .create-something:hover h2{
@@ -89,6 +93,7 @@ color:red;
 }
 p{
   font-size:medium;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .profile-images{
@@ -116,8 +121,106 @@ p{
   color:red;
   transform:scale(1.05);
   transition:0.3s ease-in;
-} 
+} */
 /*End of the about page styling*/
+
+/*about page styling */
+.our-summary {
+  display:flex;
+  justify-content: space-between;
+  margin-bottom:40px;
+  width:100%;
+  padding:5px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.about-summary {
+  width:100%;
+  margin-left:0;
+  margin-top:30px;
+  
+}
+.who-we-are  {
+  border:2px solid black;
+  padding:3px;
+  margin-right:3%;
+  border-radius:10px;
+}
+.our-story {
+  border:2px solid black;
+  padding:3px;
+  margin-right:3%;
+  border-radius:10px;
+}
+.what-we-do {
+  border:2px solid black;
+  padding:3px;
+  margin-right:3%;
+  border-radius:10px;
+}
+.why-choose-us {
+  border:2px solid black;
+  padding:3px;
+  margin-right:3%;
+  border-radius:10px;
+}
+.create-something {
+  border:2px solid black;
+  padding:3px;
+  margin-right:3%;
+  border-radius:10px;
+}
+.btnmore {
+  border:2px solid black;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 20px;
+  border-radius:10px;
+  background-color: black;
+  color:white;
+  cursor: pointer;
+  width:100%;
+  margin-bottom:0;
+  padding:2px;
+}
+.btnmore:hover {
+  background-color: red;
+  transition: .5s;
+  border-color: red;
+}
+.OurTeam h2{
+  text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  width:100%;
+  background-color: black;
+  color:white;
+  padding:10px;
+}
+
+.contributors img{
+  border: 1px solid black;
+  border-radius:20px;
+  border-radius:20px;
+  width:200px;
+  height:200px;
+  transition:transform 0.3s ease;
+  margin-left:40px;
+}
+.profile-images {
+  display:flex;
+  width:100%;
+  margin-top:50px;
+}
+.contributors p {
+  text-align: center;
+  justify-content: center;
+}
+.contributors {
+  border: 2px solid black;
+  margin-bottom:20px;
+  border-radius: 10px;
+  margin-right:10px;
+}
+
+  
 
 /* Styling of the body of home page*/
 .homebody{
