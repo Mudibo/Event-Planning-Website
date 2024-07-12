@@ -22,21 +22,21 @@ const ReviewBody = () => {
   return (
     <div className="container">
       <h1>ADD A REVIEW</h1>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="name">Name:</label>
+      <form className="form" onSubmit={handleSubmit}>
+        <label className="label" htmlFor="name">Name:</label>
         <input
           type="text"
           id="name"
-          name="name"
+          className="name"
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
         />
 
-        <label htmlFor="rating">Rating:</label>
+        <label className="label" htmlFor="rating">Rating:</label>
         <select
           id="rating"
-          name="rating"
+          className="Rating"
           value={rating}
           onChange={(e) => setRating(e.target.value)}
           required
@@ -48,10 +48,10 @@ const ReviewBody = () => {
           <option value="⭐">⭐ - Poor</option>
         </select>
 
-        <label htmlFor="review">Review:</label>
+        <label className="label" htmlFor="review">Review:</label>
         <textarea
           id="review"
-          name="review"
+          className="Review"
           rows="5"
           value={review}
           onChange={(e) => setReview(e.target.value)}
