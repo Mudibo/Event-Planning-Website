@@ -88,8 +88,12 @@
   color:white;
   cursor: pointer;
   width:100%;
+  margin-top:8px;
   margin-bottom:0;
   padding:2px;
+}
+.our-summary h3 {
+  font-size:20px;
 }
 .btnmore:hover {
   background-color: red;
@@ -103,6 +107,8 @@
   background-color: black;
   color:white;
   padding:10px;
+  font-size:larger;
+  margin:0;
 }
 
 .contributors img{
@@ -122,6 +128,13 @@
 .contributors p {
   text-align: center;
   justify-content: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 15px;;
+}
+.about_p {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size:15px;
+
 }
 .contributors {
   border: 2px solid black;
