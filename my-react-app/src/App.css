@@ -132,30 +132,35 @@
 /*end of about page */
 
 /*Review page styling */
-.container h1, .reviews h2 {
+.reviews h2 {
+  color:black;
   text-align: center;
   margin: 0 0 2rem;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size:30px;
 }
-h1{
+
+.container_1 h1{
   padding:15px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   width:100%;
   border: 1.5px solid black;
   background-color: black;
   color:white;
+  border-radius:10px;
+  margin-left:-15px;
+  text-align: center;
 }
 ul {
   list-style-type: none;
   padding:0;
 }
-.container {
+.container_1 {
   padding: 2rem;
-  width: 100%;
+  width: 100;
   margin: auto;
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin-top: 50px;
   border-radius: 10px;
   margin-top:0;
@@ -164,7 +169,8 @@ ul {
 .review {
   background-color: black;
   padding: 1.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 10px;
+  margin-top:2px;
   border-radius: 5px;
   color:white;
   border-radius:10px;
@@ -176,15 +182,20 @@ ul {
 
 .review p {
   margin: 0.5rem 0;
+  color:white;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 15px;
 }
 
 .form {
   display: flex;
   flex-direction: column;
   border:3px solid black;
-  padding:15px;
+  padding:10px;
   border-radius:10px;
-  width:100%;
+  width:50%;
+  margin-left:20%;
+  
 }
 
 input[type="text"], select, textarea {
@@ -196,6 +207,7 @@ input[type="text"], select, textarea {
 }
 
 .label {
+  color:black;
   margin: 10px 0 5px;
   font-weight: bold;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;

@@ -20,8 +20,8 @@ const ReviewBody = () => {
   };
 
   return (
-    <div className="container">
-      <h1>ADD A REVIEW</h1>
+    <div className="container_1">
+      <h1 clasName="addareview">ADD A REVIEW</h1>
       <form className="form" onSubmit={handleSubmit}>
         <label className="label" htmlFor="name">Name:</label>
         <input
