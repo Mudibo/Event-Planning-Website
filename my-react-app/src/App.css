@@ -34,97 +34,6 @@
   color: hsl(0, 100%, 50%);
 }
 
-/*About  styling */
-/*.about-summary {
-  display:flex;
-  flex-wrap: wrap;
-  justify-content:center;  
-  padding:20px; 
-  margin:0;
-}
-.who-we-are,
-.our-story,
-.what-we-do,
-.why-choose-us,
-.create-something{
-  flex: 1 1 300px; 
-  margin: 20px;
-  padding: 10px;
-  border: 2px solid;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-  color: black;
-}
-.what-we-do:hover,
-.who-we-are:hover,
-.our-story:hover {
-color:red;
-}
-.what-we-do:hover h2,
-.our-story:hover h2,
-.who-we-are:hover h2,
-.who-we-are:hover p,
-.our-story:hover p,
-.what-we-do:hover p{
-color:black;
-}
-.why-choose-us h2,
-.create-something h2{
-color:black;
-font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
- }
-.why-choose-us p,
-.create-something p{
-color:black;
-font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-.why-choose-us:hover h2,
-.create-something:hover h2{
-color:black;
-}
-.why-choose-us:hover p,
-.create-something:hover p{
-color:black;
-}
-.why-choose-us:hover,
-.create-something:hover{
-color:red;
-}
-p{
-  font-size:medium;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
-.profile-images{
-  display:grid;
-  grid-template-columns:1fr 1fr 1fr 1fr;
-  gap:2px;
-  justify-items: center;           
-}
-.img {
-  width:210px;
-  height:210px;
-  border-radius:10px;
-  transition:transform 0.3s ease;
-}
-.profile-images .contributors {
-  margin:5px;
-  text-align:center;
-}
-.contributors {
-  border:2px solid black;
-  border-radius:20px;
-  padding:0;
-}
-.profile-images .contributors:hover{
-  color:red;
-  transform:scale(1.05);
-  transition:0.3s ease-in;
-} */
-/*End of the about page styling*/
-
-/*about page styling */
 .our-summary {
   display:flex;
   justify-content: space-between;
@@ -219,7 +128,7 @@ p{
   border-radius: 10px;
   margin-right:10px;
 }
-
+/*end of about page */
   
 
 /* Styling of the body of home page*/
@@ -523,123 +432,6 @@ span a{
 }
 /* End of Login */
 
-/*Review page styling */
-.container h1, .reviews h2 {
-  text-align: center;
-  margin: 0 0 2rem;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-h1{
-  padding:15px;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  width:100%;
-  border: 1.5px solid black;
-  background-color: black;
-  color:white;
-}
-ul {
-  list-style-type: none;
-  padding:0;
-}
-.container {
-  padding: 2rem;
-  width: 100%;
-  margin: auto;
-  overflow: hidden;
-  background: white;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin-top: 50px;
-  border-radius: 10px;
-  margin-top:0;
-}
-
-.review {
-  background-color: black;
-  padding: 1.5rem;
-  margin-bottom: 1rem;
-  border-radius: 5px;
-  color:white;
-  border-radius:10px;
-}
-
-.review h3 {
-  margin-top: 0;
-}
-
-.review p {
-  margin: 0.5rem 0;
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-  border:3px solid black;
-  padding:15px;
-  border-radius:10px;
-  width:100%;
-}
-
-input[type="text"], select, textarea {
-  padding: 10px;
-  margin-bottom: 30px;
-  border: 2px solid black;
-  border-radius: 4px;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
-.label {
-  margin: 10px 0 5px;
-  font-weight: bold;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
-
-input[type="submit"] {
-  transition: .2s;
-  background-color: black;
-  color: white;
-  cursor: pointer;
-  padding: 15px;
-  font-size: 16px;
-  border-radius: 15px;
-}
-input#name {
-  margin-top:80px;
-  width:95%;
-  margin-left: -50px;
-  padding:10px;
-  margin-bottom:-50px;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-size:20px;
-}
-
-input[type="text"]:focus, select:focus, textarea:focus {
-  border-color: red;
-  border: 2px solid red;
-  outline: none;
- 
-}
-
-input[type="submit"]:hover {
-  background-color: red;
-}
-
-@media (max-width: 600px) {
-  .container {
-    padding: 1rem;
-  }
-
-  input[type="text"], select, textarea {
-    padding: 8px;
-  }
-
-  input[type="submit"] {
-    padding: 10px;
-    font-size: 14px;
-  }
-}
-/*end of reviews styling*/
-
 /* Start of SignUp */
 h2{
   color: rgb(0, 0, 0);
@@ -814,6 +606,112 @@ span a{
   transform: rotate(90deg);
 }
 /* End of FAQs */
+
+/* Start of Profile */
+.container {
+  background: rgb(255, 255, 255);
+  width: 540px;
+  height: 450px; 
+  margin: 10% auto 0;
+  position: relative;
+  box-shadow: 2px 5px 20px rgb(40, 40, 42);
+}
+.leftbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15%;
+  height: 100%;
+  background: #4ab9e4;
+  box-shadow: 3px 3px 10px rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+nav a {
+  list-style: none;
+  padding: 15px;
+  color: rgb(0, 0, 0);
+  font-size: 1.1em;
+  display: block;
+  transition: all .3s ease-in-out;
+}
+nav a:hover {
+  color: grey;
+  cursor: pointer;
+  transform: scale(1.2);
+}
+nav a:first-child {
+  margin-top: 7px;
+}
+nav a:active {
+  color: gray;
+}
+.rightbox {
+  width: 60%;
+  margin-left: 27%;
+}
+.tabShow {
+  transition: all .5s ease-in;
+  width: 80%;
+}
+h1 {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: rgb(0, 0, 0);
+  margin-top: 40px;
+  margin-bottom: 35px;
+}
+h2 {
+  color: #777;
+  text-transform: uppercase;
+  font-size: 8px;
+  letter-spacing: 1px;
+  margin-left: 2px;
+  margin-top: 10px;
+}
+.input, p {
+  border: 0;
+  border-bottom: 1px solid #3fb6a8;
+  width: 80%;
+  font-size: .7em;
+  padding: 7px 0;
+  color: #070707;
+  outline: none;
+}
+span {
+  font-size: .7em;
+  color: #777; 
+}
+.btn {
+  text-transform: uppercase;
+  margin-top: 15px;
+  background-color: hsl(0, 0%, 0%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 5px;
+  border: 0px;
+  top: 10px;
+  right: 10px;
+  padding: 5px 50px;
+  transition: background-color 0.3s linear, font-weight 0.3s linear;
+} 
+.link {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: small;
+  color: rgb(0, 0, 0);
+  border: 5px black;
+}
+.events {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 0%);
+  border-radius: 5px;
+  border: 5px black;
+  top: 10px;
+  right: 10px;
+  padding: 5px 50px;
+  transition: background-color 0.3s linear, font-weight 0.3s linear;
+}
+/* End of Profile */
 
 /*Footer styling */
 .footer2{
