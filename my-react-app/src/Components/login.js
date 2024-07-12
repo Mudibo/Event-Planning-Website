@@ -15,6 +15,15 @@ const Login = () => {
     // Your login logic goes here
     // For now, just console.log the credentials
     console.log(`Email: ${emailid}, Password: ${password}`);
+
+    if (emailid && password) {
+      // Save email in localStorage
+      localStorage.setItem('userEmail', emailid);
+      // Redirect to profile page
+      window.location.href = "/profile";
+  } else {
+      setError("Invalid login credentials");
+  }
   };
 
   return (

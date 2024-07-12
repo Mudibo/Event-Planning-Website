@@ -19,8 +19,9 @@ const SignUp = () => {
         e.preventDefault();
         saveMessages(formValues.lname, formValues.name, formValues.emailid, formValues.password);
 
-        // Redirect to profile page after signup
-        window.location.href = "profile.html";
+        // Set email in localStorage and redirect to profile page
+        localStorage.setItem('userEmail', formValues.emailid);
+        window.location.href = "/profile";
     };
 
     const saveMessages = (lname, name, emailid, password) => {
