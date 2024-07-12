@@ -425,16 +425,13 @@ h2{
   color: rgb(0, 0, 0);
   font-size: 30px;
   text-align: center;
-  padding: 20px 0;
+  padding: 40px 0 20px;
+  margin-bottom: 20px;
 }
 .container{
   transition: .5s ease-in-out;
-  flex-direction: column;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
- 
+  height: 100%;
+  padding: 50px 0;
 }
 .container form{
   width: 100%;
@@ -445,9 +442,9 @@ h2{
 }
 .inputBox {
   position: relative;
-  top: -15px;
-  left: 20px;
   color: rgb(0, 0, 0);
+  flex: 1;
+  margin-bottom: 20px; 
 }
 .inputBox button{
   width: 365px;    
@@ -462,11 +459,6 @@ h2{
   border-radius: 5px;
   transition: .3s ease-in-out;
   margin-top: 20px;
-}
-.two-forms{
-  display: flex;
-  gap: 10px;
-  
 }
 .input-field{
   height: 40px;
