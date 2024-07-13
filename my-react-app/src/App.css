@@ -830,6 +830,66 @@ span {
   transition: background-color 0.3s linear, font-weight 0.3s linear;
 }
 /* End of Profile */
+/* start of vendor page styling */
+.container_body {
+  padding: 2rem;
+  width: 50%;
+  margin: auto;
+  overflow: hidden;
+  background: white;
+  margin-top: 50px;
+  border-radius: 20px;
+  margin-top: 0;
+  border: 2px solid black;
+  
+}
+.container_body h1{
+  padding: 15px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  width: 100%;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  margin-left:-15px;
+}
+.form_vendors {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid black;
+  padding: 10px;
+  border-radius: 10px;
+}
+input[type="text"], select, textarea {
+  padding: 10px;
+  margin-bottom: 30px;
+  border: 2px solid black;
+  border-radius: 4px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.lbl_vendors{
+  color: black;
+  margin: 10px 0 5px;
+  font-weight: bold;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+input[type="submit"] {
+  transition: .2s;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  font-size: 16px;
+  border-radius: 15px;
+}
+input[type="text"]:focus, select:focus, textarea:focus {
+  border-color: red;
+  outline: none;
+}
+input[type="submit"]:hover {
+  background-color: red;
+}
+/*end of vendor page styling*/
 
 /*Footer styling */
 .footer2{
