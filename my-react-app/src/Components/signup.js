@@ -42,20 +42,22 @@ const SignUp = () => {
         <form action="" id="signupForm">
 
                 
-                <div class="inputBox">
-                    <input type="email" class="input-field" id="name" placeholder="Firstname" />
-                </div>
-                <div class="inputBox">
-                    <input type="password" class="input-field" id="lname" placeholder="Last name" />
-                </div>
-                <div class="inputBox">
-                    <input type="email" class="input-field" id="emailid" placeholder="Email" />
-                </div>
-                <div class="inputBox">
-                    <input type="password" class="input-field" id="password" placeholder="Password" />
-                </div>
-                <div class="inputBox">
-                    <button type="submit">Submit</button>
+                <div className="fields_signup">
+                    <div class="inputBox">
+                        <input type="email" class="input-field_1" id="name" placeholder="Firstname" />
+                    </div>
+                    <div class="inputBox">
+                        <input type="password" class="input-field" id="lname" placeholder="Last name" />
+                    </div>
+                    <div class="inputBox">
+                        <input type="email" class="input-field" id="emailid" placeholder="Email" />
+                    </div>
+                    <div class="inputBox">
+                        <input type="password" class="input-field" id="password" placeholder="Password" />
+                    </div>
+                    <div class="inputBox">
+                        <button type="submit">Submit</button>
+                    </div>
                 </div>
 
                 <div class="two-col">
