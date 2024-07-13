@@ -5,6 +5,7 @@
   background-color: transparent;
   transition: background-color 0.3s linear, border-bottom 0.3s linear;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+  margin-bottom:80px;
 }
 .navbar img{
   width: 100px;
@@ -560,12 +561,25 @@ input[type="submit"]:hover {
   padding: 5px 40px 5px 20px;
   transition: background-color 0.3s linear, font-weight 0.3s linear;
 }
-.fields_signup {
-  padding:0;
-  margin:-20px;
-}
+
 #lname {
-  margin-top:-50%;
+  margin-top:-20%;
+  margin-bottom:30px;
+  padding:10px;
+}
+#emailid{
+  margin-top:0;
+  margin-bottom:30px;
+  padding:10px;
+}
+#password{
+  margin-top:0;
+  margin-bottom:30px;
+  padding:10px;
+}
+#signupForm{
+  margin-top:-10px;
+  
 }
 
 .input-field:hover, .input-field:focus{
