@@ -69,7 +69,7 @@ const Profile = () => {
     ];
 
     return (
-        <div className="container">
+        <div className="container10">
             <div className="leftbox">
                 <nav>
                     {tabs.map((tab, index) => (

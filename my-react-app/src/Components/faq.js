@@ -23,7 +23,7 @@ const FAQs = () => {
             <ul className="faq">
                 {questions.map((item, index) => (
                     <li key={index}>
-                        <div className="q" onClick={() => toggleAnswer(index)}>
+                        <div className="Q" onClick={() => toggleAnswer(index)}>
                             <span className={`arrow ${activeIndex === index ? 'arrow-rotated' : ''}`}></span>
                             <span>{item.question}</span>
                         </div>
