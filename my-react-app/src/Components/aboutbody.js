@@ -16,7 +16,7 @@ const AboutBody = () => {
             <div id = "our-summary" className="our-summary">
                 
                 <div id="who-we-are" className="who-we-are">
-                    <h3>Who we are</h3>
+                    <h3 className='title-summary'>Who we are</h3>
                     <p className="about_p">
                     Welcome to Plannit, your premier partner in seamless event planning and management. 
                     {showMoreWhoWeAre && (
@@ -29,7 +29,7 @@ const AboutBody = () => {
                 </div>
                 
                 <div id="Our Story" className="our-story">
-                    <h3>Our Story</h3>
+                    <h3 className='title-summary'>Our Story</h3>
                     <p className="about_p">
                         Founded in 2024, Plannit began with a passion for facilitating unforgettable events. We have grown into a leading event planning firm.
                         {showMoreOurStory && (
@@ -42,7 +42,7 @@ const AboutBody = () => {
                 </div>
 
                 <div id="what-we-do" className="what-we-do">
-                    <h3>What We Do</h3>
+                    <h3 className='title-summary'>What We Do</h3>
                     <p className="about_p">
                     At Plannit, we specialize in planning a wide range of events, including weddings, birthdays, parties, among others.
                     {showMoreWhatWeDo && (
@@ -55,7 +55,7 @@ const AboutBody = () => {
                 </div>
 
                 <div id="why-choose-us" className="why-choose-us">
-                    <h3>Why Choose Us</h3>
+                    <h3 className='title-summary'>Why Choose Us</h3>
                     <p className="about_p">
                     Choosing Plannit means partnering with a team that is dedicated to turning your vision into reality. Our unique approach combines creativity, attention to detail, and a client-oriented mindset to deliver events that exceed expectations.
                     {showMoreWhyChooseUs && (
@@ -68,7 +68,7 @@ const AboutBody = () => {
                 </div>
 
                 <div id="create-something" className="create-something">
-                    <h3>Create Something</h3>
+                    <h3 className='title-summary'>Create Something</h3>
                     <p className="about_p">
                         Ready to have a seamless event planning process? Get in touch with us today to start planning your dream event. 
                         {showMoreCreateSomething && (
