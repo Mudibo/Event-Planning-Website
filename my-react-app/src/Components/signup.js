@@ -56,7 +56,7 @@ const SignUp = () => {
                         <input type="password" class="input-field" id="password" placeholder="Password" />
                     </div>
                     <div class="inputBox">
-                        <button type="submit">Submit</button>
+                        <button className="btn_subsign" type="submit">Submit</button>
                     </div>
                 </div>
 
