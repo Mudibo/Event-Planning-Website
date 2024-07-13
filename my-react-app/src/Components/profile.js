@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { initializeApp } from 'firebase/app';
 import { getDatabase, ref, query, orderByChild, equalTo, get } from 'firebase/database';
 import 'firebase/auth';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import 'boxicons/css/boxicons.min.css';
 
-// Firebase configuration
 const firebaseConfig = {
     apiKey: "AIzaSyCYN8IWC2NaSN5nJfCxKEwXN79OWZDKqpw",
     authDomain: "webapp-b4d18.firebaseapp.com",
@@ -70,8 +71,8 @@ const Profile = () => {
 
     return (
         <div className="container10">
-            <div className="leftbox">
-                <nav>
+            <div className="leftbox1">
+                <nav class="navbar2">
                     {tabs.map((tab, index) => (
                         <a
                             key={index}
@@ -83,29 +84,29 @@ const Profile = () => {
                     ))}
                 </nav>
             </div>
-            <div className="rightbox">
+            <div className="rightbox1">
                 {activeTab === 0 && (
                     <div className="profile tabShow">
-                        <h1>Personal Info</h1>
-                        <h2>Name</h2>
-                        <input type="text" id="profileName" className="input" value={userData.name} readOnly />
-                        <h2>Last Name</h2>
-                        <input type="text" id="profileLname" className="input" value={userData.lname} readOnly />
-                        <h2>Birthday</h2>
-                        <input type="text" className="input" value="April 26, 2004" readOnly />
-                        <h2>Gender</h2>
-                        <input type="text" className="input" value="Female" readOnly />
-                        <h2>Email</h2>
-                        <input type="text" id="profileEmail" className="input" value={userData.emailid} readOnly />
-                        <h2>Password</h2>
-                        <input type="password" className="input" value={userData.password} readOnly />
-                        <button className="btn">Update</button>
+                        <h1 class="head">Personal Info</h1>
+                        <h2 class="inside">Name</h2>
+                        <input class="write" type="text" id="profileName" className="input" value={userData.name} readOnly />
+                        <h2 class="inside">Last Name</h2>
+                        <input class="write" type="text" id="profileLname" className="input" value={userData.lname} readOnly />
+                        <h2 class="inside">Birthday</h2>
+                        <input class="write" type="text" className="input" value="April 26, 2004" readOnly />
+                        <h2 class="inside">Gender</h2>
+                        <input class="write" type="text" className="input" value="Female" readOnly />
+                        <h2 class="inside">Email</h2>
+                        <input class="write" type="text" id="profileEmail" className="input" value={userData.emailid} readOnly />
+                        <h2 class="inside">Password</h2>
+                        <input class="write" type="password" className="input" value={userData.password} readOnly />
+                        <button className="btn1">Update</button>
                     </div>
                 )}
                 {activeTab === 1 && (
                     <div className="Event tabShow">
-                        <h1>Events Info</h1>
-                        <h2>Event Preferences</h2>
+                        <h1 class="head">Events Info</h1>
+                        <h2 class="inside">Event Preferences</h2>
                         <select className="events" id="event-type">
                             <option value="">Select an event type</option>
                             <option value="Wedding Ceremony">Wedding Ceremony</option>
@@ -117,48 +118,48 @@ const Profile = () => {
                             <option value="Fundraiser">Fundraiser</option>
                             <option value="Others">Others</option>
                         </select>
-                        <input type="text" className="input" />
-                        <h2>Feedbacks</h2>
-                        <input type="text" className="input" />
-                        <button className="btn">Update</button>
+                        <input class="write" type="text" className="input" />
+                        <h2 class="inside">Feedbacks</h2>
+                        <input class="write" type="text" className="input" />
+                        <button className="btn1">Update</button>
                     </div>
                 )}
                 {activeTab === 2 && (
                     <div className="payment tabShow">
-                        <h1>Payment Info</h1>
-                        <h2>Payment Method</h2>
-                        <input type="text" className="input" value="MasterCard - 0202 ****** 1234" readOnly />
-                        <h2>Billing Address</h2>
-                        <input type="text" className="input" value="1234 street, Nairobi" readOnly />
-                        <h2>ZipCode</h2>
-                        <input type="text" className="input" value="12345 00100" readOnly />
-                        <h2>Billing Date</h2>
-                        <input type="text" className="input" value="Jan 20, 2012" readOnly />
-                        <h2>Redeem Card</h2>
-                        <input type="password" id="profilePassword" className="input" value="km" readOnly />
-                        <button className="btn">Update</button>
+                        <h1 class="head">Payment Info</h1>
+                        <h2 class="inside">Payment Method</h2>
+                        <input class="write" type="text" className="input" value="MasterCard - 0202 ****** 1234" readOnly />
+                        <h2 class="inside">Billing Address</h2>
+                        <input class="write" type="text" className="input" value="1234 street, Nairobi" readOnly />
+                        <h2 class="inside">ZipCode</h2>
+                        <input class="write" type="text" className="input" value="12345 00100" readOnly />
+                        <h2 class="inside">Billing Date</h2>
+                        <input class="write" type="text" className="input" value="Jan 20, 2012" readOnly />
+                        <h2 class="inside">Redeem Card</h2>
+                        <input class="write" type="password" id="profilePassword" className="input" value="km" readOnly />
+                        <button className="btn1">Update</button>
                     </div>
                 )}
                 {activeTab === 3 && (
                     <div className="privacy tabShow">
-                        <h1>Privacy Settings</h1>
-                        <h2>Manage Email Notifications</h2>
+                        <h1 class="head">Privacy Settings</h1>
+                        <h2 class="inside">Manage Email Notifications</h2>
                         <p></p>
-                        <h2>Manage Privacy Settings</h2>
+                        <h2 class="inside">Manage Privacy Settings</h2>
                         <p></p>
-                        <h2>Personalized Ad Experience</h2>
-                        <h2>Protect Account</h2>
-                        <button className="btn">Update</button>
+                        <h2 class="inside">Personalized Ad Experience</h2>
+                        <h2 class="inside">Protect Account</h2>
+                        <button className="btn1">Update</button>
                     </div>
                 )}
                 {activeTab === 4 && (
                     <div className="settings tabShow">
-                        <h1>Account Settings</h1>
-                        <h2>Hold Subscription</h2>
+                        <h1 class="head">Account Settings</h1>
+                        <h2 class="inside">Hold Subscription</h2>
                         <p></p>
-                        <h2>Cancel Subscription</h2>
+                        <h2 class="inside">Cancel Subscription</h2>
                         <p></p>
-                        <button className="btn">Update</button>
+                        <button className="btn1">Update</button>
                     </div>
                 )}
             </div>
