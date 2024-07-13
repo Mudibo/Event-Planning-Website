@@ -5,7 +5,6 @@
   background-color: transparent;
   transition: background-color 0.3s linear, border-bottom 0.3s linear;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
-  margin-bottom:20px;
 }
 .navbar img{
   width: 100px;
@@ -498,9 +497,7 @@ input[type="submit"]:hover {
   color: rgb(0, 0, 0);
   font-size: 30px;
   text-align: center;
-  padding:0;
-  margin-top:-20px;
-  margin-bottom:60px;
+  padding: 10px 0 10px 0;
 }
 .container2 {
   transition: .5s ease-in-out;
@@ -563,43 +560,6 @@ input[type="submit"]:hover {
   padding: 5px 40px 5px 20px;
   transition: background-color 0.3s linear, font-weight 0.3s linear;
 }
-
-#lname {
-  margin-top:-20px;
-  margin-bottom:20px;
-  padding:10px;
-}
-#emailid{
-  margin-top:0;
-  margin-bottom:10px;
-  padding:10px;
-}
-#password{
-  margin-top:0;
-  margin-bottom:30px;
-  padding:10px;
-}
-#signupForm{
-  margin-top:-10px;
-  
-}
-.input-field_1 {
-  padding:10px;
-  height: 40px;
-  width: 100%;
-  background-color: hsl(0, 0%, 100%);
-  color: hsl(0, 0%, 0%);
-  border-radius: 5px;
-  border: 5px;
-  border: outset;
-  padding: 5px 40px 5px 20px;
-  transition: background-color 0.3s linear, font-weight 0.3s linear;
-}
-.input-field_1:hover, .input-field_1:focus{
-  background: rgb(255, 255, 255);
-  box-shadow: 1px 5px 7px 1px hsl(240, 2%, 19%);
-}
-
 .input-field:hover, .input-field:focus{
   background: rgb(255, 255, 255);
   box-shadow: 1px 5px 7px 1px hsl(240, 2%, 19%);
@@ -647,8 +607,6 @@ input[type="submit"]:hover {
   padding: 5px 0 -100px 0;
   display: flex;
   justify-content: center;
-  margin-top:80px;
-  margin-bottom:20px;
 }
 .subheading a{
   font-weight: 500;
@@ -716,35 +674,43 @@ input[type="submit"]:hover {
 /* End of FAQs */
 
 /* Start of Profile */
+body{
+  margin: 0px;
+  min-height: 100vh;
+  font-family: roboto, Georgia;    
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
 .container10 {
   background: rgb(255, 255, 255);
   width: 540px;
-  height: 100vh;; 
-  margin: 10% auto 0;
+  height: 450px; 
+  margin: 0 auto;
   position: relative;
-  box-shadow: 2px 5px 20px rgb(68, 68, 70);
+  margin-top: 10%;
+  box-shadow: 2px 5px 20px rgb(40, 40, 42);
 }
 .leftbox1 {
+  float: left;
+  top: -5%;
+  left: 5%;
   position: absolute;
-  top: 0;
-  left: 0;
   width: 15%;
-  height: 60vh;
-  background: #4ab9e4;
-  box-shadow: 3px 3px 10px rgba(255, 255, 255, 0.2);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 20px;
+  height: 110%;
+  background: rgb(74, 185, 228);
+  box-shadow: 3px 3px 10px rgb(255, 255, 255);
 }
 .navbar2 a {
   list-style: none;
-  padding: 15px;
+  padding: 35px;
   color: rgb(0, 0, 0);
   font-size: 1.1em;
   display: block;
   transition: all .3s ease-in-out;
-  margin-bottom: 20px;
 }
 .navbar2 a:hover {
   color: grey;
@@ -779,20 +745,20 @@ input[type="submit"]:hover {
   margin-left: 2px;
   margin-top: 10px;
 }
-.write, p{
+.write-input, p {
   border: 0;
   border-bottom: 1px solid #3fb6a8;
-  width: 100%;
+  width: 80%;
   font-size: .7em;
   padding: 7px 0;
-  color: #000000;
+  color: #070707;
   outline: none;
 }
 span {
   font-size: .7em;
   color: #777; 
 }
-.btn1 {
+.btn {
   text-transform: uppercase;
   margin-top: 15px;
   background-color: hsl(0, 0%, 0%);
