@@ -396,8 +396,9 @@ input[type="submit"]:hover {
   left: 27px;
 }
 .main-content3{
-  height: 100vh;
+  margin-top:30px;
 }
+
 .content3{
   display: flex;
   justify-content: center;
@@ -442,9 +443,12 @@ input[type="submit"]:hover {
   color: white;
 }
 .main-content3 h2{
-  font-size: 40px;
-  color: hsl(0, 0%, 0%);
+  border:2px solid black;
+  font-size: 30px;
+  color: white;
+  background-color: black;
   text-align: center;
+  padding:20px;
 }
 
 .main-content4{
