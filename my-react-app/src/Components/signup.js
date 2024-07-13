@@ -36,27 +36,23 @@ const SignUp = () => {
 
 
     return (
-        <div class="container">
-        <span> Have an account? <a href="/login" onclick="login()">Login</a></span>
-        <h2>Sign Up</h2>
+        <div class="container2">
+        <span class="subheading" > Have an account? <a href="/login" onclick="login()">Login</a></span>
+        <h2 class="heading5" >Sign Up</h2>
         <form action="" id="signupForm">
 
                 
                 <div class="inputBox">
-                    <input type="text" class="input-field" id="lname" placeholder="Firstname" />
-                    <i class="bx bx-user"></i>
+                    <input type="email" class="input-field" id="name" placeholder="Firstname" />
                 </div>
                 <div class="inputBox">
-                    <input type="text" class="input-field" id="lname" placeholder="Lastname" />
-                    <i class="bx bx-user"></i>
+                    <input type="password" class="input-field" id="lname" placeholder="Last name" />
                 </div>
                 <div class="inputBox">
                     <input type="email" class="input-field" id="emailid" placeholder="Email" />
-                    <i class="bx bx-envelope"></i>
                 </div>
                 <div class="inputBox">
                     <input type="password" class="input-field" id="password" placeholder="Password" />
-                    <i class="bx bx-lock-alt"></i>
                 </div>
                 <div class="inputBox">
                     <button type="submit">Submit</button>
