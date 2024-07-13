@@ -11,7 +11,7 @@ import Login from './Components/login';
 import SignUp from './Components/signup';
 import FAQs from './Components/faq';
 import Profile from './Components/profile';
-
+import ContactsPage from './Pages/contacts';
 function App() {
   return (
     <Router>
@@ -24,7 +24,7 @@ function App() {
         <Route path="/reviews" element={<ReviewPage/>} />
         <Route path="/faq" element={<FAQs/>} />
         <Route path="/profile" element={<Profile/>} />
-
+        <Route path="/contacts" element={<ContactsPage/>}/>
       </Routes>
       <Footer/>
     </Router>
