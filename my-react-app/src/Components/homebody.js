@@ -28,7 +28,7 @@ const HomeBody = () => {
 
         <div className="main-content2">
             <div className="content2">
-                <img src={quote} alt = "quote" className="elon"/>
+                <img src={quote} alt = "quote" className="quote"/>
                 <p className="testimonial">"I used Plannit for Tesla's annual gala, and it was fantastic! The platform was easy to navigate, and incredibly comprehensive. The customizable event page and seamless payment system made planning stress-free, and our attendees loved the event. Thanks to Plannit, our event was a huge success. We'll definitely use this platform again!"</p>
                 <img src={ElonMusk} alt="Elon Musk" className="elon"/>
                 <h4 id="name">Elon Musk</h4>

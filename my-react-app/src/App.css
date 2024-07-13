@@ -131,10 +131,14 @@
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 15px;;
 }
+.title-summary {
+  text-align: center;
+  color:black;
+}
 .about_p {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size:15px;
-
+  width:100%;
 }
 .contributors {
   border: 2px solid black;
@@ -278,10 +282,9 @@ input[type="submit"]:hover {
 .homebody{
   margin: 0px;
   min-height: 100vh;
-  font-family: roboto, Georgia; 
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
   margin: 0px;
-  min-height: 100vh;
-  font-family: roboto, Georgia; 
+  min-height: 100vh; 
   /*background: url(Images/Background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -298,8 +301,21 @@ input[type="submit"]:hover {
   padding-right: 25px;
   box-sizing: border-box;
   border-radius: 25px;
-  background: linear-gradient(to right, whitesmoke, beige);
+  background: black;
   margin: 100px;
+}
+.quote {
+  border:2px solid white;
+  border-radius: 25px;
+  background-color: white;
+  color:red;
+}
+.content2 p {
+  color:white;
+}
+.content2 h4{
+  color:white;
+  font-size: 20px;
 }
 .main-content{
   display: flex;
@@ -318,6 +334,13 @@ input[type="submit"]:hover {
   max-width: 50%;
   margin-left: 30px;
   margin-top: 0px;
+}
+.text h2 {
+  font-size:25px;
+  color:black;
+}
+.text p {
+  font-size: 20px;
 }
 .peopleSmilingSafariRally{
   width: 500px; 
@@ -447,6 +470,20 @@ input[type="submit"]:hover {
 }
 .content4 img:hover{
   transform: scale(1.05);
+}
+#login{
+  font-size: 15px;
+  background-color: hsl(0, 0%, 0%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 5px;
+  border: 0px;
+  top: 10px;
+  right: 10px;
+  padding: 5px 50px;
+  transition: background-color 0.3s linear, font-weight 0.3s linear;
+}
+#login:hover{
+  background-color: hsl(0, 100%, 50%);
 }
 
 /* End of styling of the home page*/
