@@ -560,6 +560,14 @@ input[type="submit"]:hover {
   padding: 5px 40px 5px 20px;
   transition: background-color 0.3s linear, font-weight 0.3s linear;
 }
+.fields_signup {
+  padding:0;
+  margin:-20px;
+}
+#lname {
+  margin-top:-50%;
+}
+
 .input-field:hover, .input-field:focus{
   background: rgb(255, 255, 255);
   box-shadow: 1px 5px 7px 1px hsl(240, 2%, 19%);
