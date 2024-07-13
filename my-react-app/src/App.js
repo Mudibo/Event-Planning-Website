@@ -17,8 +17,9 @@ function App() {
     <Router>
       <Header/>
       <Routes>
-        <Route path="/about" element={<AboutPage />}/>
+        <Route exact path="/" element={<HomePage />}/>
         <Route path="/home" element={<HomePage />}/>
+        <Route path="/about" element={<AboutPage />}/>
         <Route path="/login" Component={Login} />
         <Route path="/signup" Component={SignUp} />
         <Route path="/reviews" element={<ReviewPage/>} />
