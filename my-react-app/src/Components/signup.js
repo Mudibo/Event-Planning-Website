@@ -77,10 +77,10 @@ const SignUp = () => {
                 
                 <div className="fields_signup">
                     <div class="inputBox">
-                        <input type="email" class="input-field_1" id="name" placeholder="Firstname" />
+                        <input type="text" class="input-field" id="name" placeholder="Firstname" />
                     </div>
                     <div class="inputBox">
-                        <input type="password" class="input-field" id="lname" placeholder="Last name" />
+                        <input type="text" class="input-field" id="lname" placeholder="Last name" />
                     </div>
                     <div class="inputBox">
                         <input type="email" class="input-field" id="emailid" placeholder="Email" />

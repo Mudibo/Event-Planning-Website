@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const ReviewBody = () => {
   // State to hold form inputs
-  const [Name, setName] = useState('');
+  const [name, setName] = useState('');
   const [rating, setRating] = useState('⭐⭐⭐⭐⭐');
   const [review, setReview] = useState('');
   // State to hold all reviews
@@ -11,7 +11,7 @@ const ReviewBody = () => {
   // Handle form submission
   const handleSubmit = (event) => {
     event.preventDefault();
-    const newReview = { Name, rating, review };
+    const newReview = { name, rating, review };
     setReviews([...reviews, newReview]);
     // Clear form inputs
     setName('');
@@ -23,12 +23,12 @@ const ReviewBody = () => {
     <div className="container_1">
       <h1 clasName="addareview">ADD A REVIEW</h1>
       <form className="form" onSubmit={handleSubmit}>
-        <label className="label" htmlFor="Name">Name:</label>
+        <label className="label" htmlFor="name">Name:</label>
         <input
           type="text"
-          id="Name"
-          className="Name"
-          value={Name}
+          id="name"
+          className="name"
+          value={name}
           onChange={(e) => setName(e.target.value)}
           required
         />
