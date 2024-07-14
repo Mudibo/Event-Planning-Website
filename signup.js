@@ -10,34 +10,39 @@ const firebaseConfig = {
   };
 
 // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-
-// Reference your database
 var EventManagementDB = firebase.database().ref("EventManagement");
-
 document.getElementById("signupForm").addEventListener("submit", submitForm);
 
 function submitForm(e) {
     e.preventDefault();
+    console.log("Form submitted!");
+
     var name = getElementVal("name");
     var lname = getElementVal("lname");
     var emailid = getElementVal("emailid");
     var password = getElementVal("password");
 
+    console.log("Collected values - ", name, lname, emailid, password);
+
     saveMessages(lname, name, emailid, password);
 
-    // Redirect to FAQ.html after signup
+    // Redirect to profile page after signup
     window.location.href = "profile.html";
 }
 
 const saveMessages = (lname, name, emailid, password) => {
     var newEventManagement = EventManagementDB.push();
-
     newEventManagement.set({
         lname: lname,
         name: name,
         emailid: emailid,
-        password: password,
+        password: password
+    }, function(error) {
+        if (error) {
+            console.error("Error saving message:", error);
+        } else {
+            console.log("Message saved successfully!");
+        }
     });
 };
 

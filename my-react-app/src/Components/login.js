@@ -14,55 +14,53 @@ const Login = () => {
   const login = (emailid, password) => {
     // Your login logic goes here
     // For now, just console.log the credentials
-    console.log(`Email: ${emailid}, Password: ${password}`);
 
     if (emailid && password) {
       // Save email in localStorage
       localStorage.setItem('userEmail', emailid);
       // Redirect to profile page
       window.location.href = "/profile";
-  } else {
+    } else {
       setError("Invalid login credentials");
-  }
+    }
   };
 
   return (
     <div className="container2">
-      <span class="subheading">Don't have an account? <a href="/signup">Sign Up</a></span>
-      <h2 class="heading5">Login</h2>
+      <span className="subheading">
+        Don't have an account? <a href="/signup">Sign Up</a>
+      </span>
+      <h2 className="heading5">Login</h2>
       <form onSubmit={handleSubmit}>
-        
-          <div className="inputBox">
-            <input
-              type="email"
-              className="input-field"
-              id="login_emailid"
-              placeholder="Email"
-              value={emailid}
-              onChange={(e) => setEmailid(e.target.value)}
-            />
-            <i className="bx bx-user"></i>
-          </div>
-          <div className="inputBox">
-            <input
-              type="password"
-              className="input-field"
-              id="login_password"
-              placeholder="Password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-            <i className="bx bx-lock-alt"></i>
-          </div>
-        
+        <div className="inputBox">
+          <input
+            type="email"
+            className="input-field"
+            id="login_emailid"
+            placeholder="Email"
+            value={emailid}
+            onChange={(e) => setEmailid(e.target.value)}
+          />
+          <i className="bx bx-user"></i>
+        </div>
+        <div className="inputBox">
+          <input
+            type="password"
+            className="input-field"
+            id="login_password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <i className="bx bx-lock-alt"></i>
+        </div>
         <div className="inputBox">
           <button type="submit">Login</button>
         </div>
-
         <div className="two-col">
           <div className="one">
             <input type="checkbox" id="login" />
-            <label for="login">Remember Me</label>
+            <label htmlFor="login">Remember Me</label>
           </div>
           <div className="two">
             <label>
