@@ -498,6 +498,9 @@ input[type="submit"]:hover {
   font-size: 30px;
   text-align: center;
   padding: 10px 0 10px 0;
+  padding:0;
+  margin-top:10px;
+  margin-bottom:60px;
 }
 .container2 {
   transition: .5s ease-in-out;
@@ -564,6 +567,44 @@ input[type="submit"]:hover {
   background: rgb(255, 255, 255);
   box-shadow: 1px 5px 7px 1px hsl(240, 2%, 19%);
 }
+#lname {
+  margin-top:-20px;
+  margin-bottom:20px;
+  padding:10px;
+}
+#emailid{
+  margin-top:0;
+  margin-bottom:5px;
+  padding:10px;
+}
+#password{
+  margin-top:0;
+  margin-bottom:0;
+  padding:10px;
+}
+.btn_subsign{
+  margin-bottom:10px;
+}
+#signupForm{
+  margin-top:-10px;
+  margin-bottom:10px;
+}
+.input-field_1 {
+  padding:10px;
+  height: 40px;
+  width: 100%;
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 0%);
+  border-radius: 5px;
+  border: 5px;
+  border: outset;
+  padding: 5px 40px 5px 20px;
+  transition: background-color 0.3s linear, font-weight 0.3s linear;
+}
+.input-field_1:hover, .input-field_1:focus{
+  background: rgb(255, 255, 255);
+  box-shadow: 1px 5px 7px 1px hsl(240, 2%, 19%);
+}
 ::-webkit-input-placeholder{
   color: rgb(0, 0, 0);
 }
@@ -588,7 +629,7 @@ input[type="submit"]:hover {
   align-items: center;
 }
 .two-col .one, .two-col .two {
-  margin-bottom: 10px;
+  margin-bottom:10px;
   color: black;
 }
 .two label{
@@ -604,14 +645,16 @@ input[type="submit"]:hover {
 .subheading {
   color: rgb(0, 0, 0);
   font-size: small;
-  padding: 5px 0 -100px 0;
-  display: flex;
+  padding: 5px;
   justify-content: center;
+  margin-top:150px;
 }
 .subheading a{
   font-weight: 500;
   color:  rgb(220, 20, 20);
   margin-left: 5px;
+  margin-top:80px;
+  margin-bottom:20px;
 }
 /* End of SignUp & Login */
 
@@ -674,7 +717,7 @@ input[type="submit"]:hover {
 /* End of FAQs */
 
 /* Start of Profile */
-body{
+.body{
   margin: 0px;
   min-height: 100vh;
   font-family: roboto, Georgia;    
@@ -787,6 +830,66 @@ span {
   transition: background-color 0.3s linear, font-weight 0.3s linear;
 }
 /* End of Profile */
+/* start of vendor page styling */
+.container_body {
+  padding: 2rem;
+  width: 50%;
+  margin: auto;
+  overflow: hidden;
+  background: white;
+  margin-top: 50px;
+  border-radius: 20px;
+  margin-top: 0;
+  border: 2px solid black;
+  
+}
+.container_body h1{
+  padding: 15px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  width: 100%;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  margin-left:-15px;
+}
+.form_vendors {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid black;
+  padding: 10px;
+  border-radius: 10px;
+}
+input[type="text"], select, textarea {
+  padding: 10px;
+  margin-bottom: 30px;
+  border: 2px solid black;
+  border-radius: 4px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.lbl_vendors{
+  color: black;
+  margin: 10px 0 5px;
+  font-weight: bold;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+input[type="submit"] {
+  transition: .2s;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  font-size: 16px;
+  border-radius: 15px;
+}
+input[type="text"]:focus, select:focus, textarea:focus {
+  border-color: red;
+  outline: none;
+}
+input[type="submit"]:hover {
+  background-color: red;
+}
+/*end of vendor page styling*/
 
 /*Footer styling */
 .footer2{
@@ -797,6 +900,7 @@ span {
   padding: 20px 0px; 
   position: relative; 
   bottom: 0px; 
+  margin-top:20px;
 }
 .footer2 ul{
   list-style-type: none;

@@ -68,74 +68,41 @@ const SignUp = () => {
   };
 
 
-  return (
-      <div className="container2">
-        <span className="subheading">
-          Have an account? <a href="/login">Login</a>
-        </span>
-        <h2 className="heading5">Sign Up</h2>
-        <form onSubmit={handleSubmit}>
-          <div className="fields_signup">
-            <div className="inputBox">
-              <input
-                type="text"
-                className="input-field"
-                id="name"
-                placeholder="Firstname"
-                value={formValues.name}
-                onChange={handleChange}
-              />
-              {errors.name && <span className="error">{errors.name}</span>}
-            </div>
-            <div className="inputBox">
-              <input
-                type="text"
-                className="input-field"
-                id="lname"
-                placeholder="Lastname"
-                value={formValues.lname}
-                onChange={handleChange}
-              />
-              {errors.lname && <span className="error">{errors.lname}</span>}
-            </div>
-            <div className="inputBox">
-              <input
-                type="email"
-                className="input-field"
-                id="emailid"
-                placeholder="Email"
-                value={formValues.emailid}
-                onChange={handleChange}
-              />
-              {errors.emailid && <span className="error">{errors.emailid}</span>}
-            </div>
-            <div className="inputBox">
-              <input
-                type="password"
-                className="input-field"
-                id="password"
-                placeholder="Password"
-                value={formValues.password}
-                onChange={handleChange}
-              />
-              {errors.password && <span className="error">{errors.password}</span>}
-            </div>
-            <div className="inputBox">
-              <button type="submit">Submit</button>
-            </div>
-          </div>
-          <div className="two-col">
-            <div className="one">
-              <input type="checkbox" id="register-check" />
-              <label htmlFor="register-check"> Remember Me</label>
-            </div>
-            <div className="two">
-              <input type="checkbox" id="agreement" />
-              <label htmlFor="agreement" className="terms-label">
-                I agree to these <a href="#">Terms & conditions</a>
-              </label>
-            </div>
-          </div>
+    return (
+        <div class="container2">
+        <span class="subheading" > Have an account? <a href="/login" onclick="login()">Login</a></span>
+        <h2 class="heading5" >Sign Up</h2>
+        <form action="" id="signupForm">
+
+                
+                <div className="fields_signup">
+                    <div class="inputBox">
+                        <input type="email" class="input-field_1" id="name" placeholder="Firstname" />
+                    </div>
+                    <div class="inputBox">
+                        <input type="password" class="input-field" id="lname" placeholder="Last name" />
+                    </div>
+                    <div class="inputBox">
+                        <input type="email" class="input-field" id="emailid" placeholder="Email" />
+                    </div>
+                    <div class="inputBox">
+                        <input type="password" class="input-field" id="password" placeholder="Password" />
+                    </div>
+                    <div class="inputBox">
+                        <button type="submit">Submit</button>
+                    </div>
+                </div>
+
+                <div class="two-col">
+                    <div class="one">
+                        <input type="checkbox" id="register-check" />
+                        <label for="register-check"> Remember Me</label>
+                    </div>
+                    <div class="two">
+                        <input type="checkbox" id="agreement"  />
+                        <label for="agreement" class="terms-label">I agree to these <a href="#">Terms & conditions</a></label>
+                    </div>
+                </div>
         </form>
       </div>
   );

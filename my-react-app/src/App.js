@@ -12,6 +12,7 @@ import SignUp from './Components/signup';
 import FAQs from './Components/faq';
 import Profile from './Components/profile';
 import ContactsPage from './Pages/contacts';
+import VendorPage from './Pages/vendor';
 function App() {
   return (
     <Router>
@@ -26,6 +27,7 @@ function App() {
         <Route path="/faq" element={<FAQs/>} />
         <Route path="/profile" element={<Profile/>} />
         <Route path="/contacts" element={<ContactsPage/>}/>
+        <Route path="/vendors" element={<VendorPage/>}/>
       </Routes>
       <Footer/>
     </Router>
