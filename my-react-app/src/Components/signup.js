@@ -1,76 +1,78 @@
-import React, { useState } from 'react';
-import { ref, push, set } from './firebase/database';
-import { database } from './firebaseConfig'; // Adjust the path as per your project structure
+import React, { useState } from "react";
+import { database } from "../firebase";
+import { ref, push, set } from "firebase/database";
 
 const SignUp = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    lname: '',
-    emailid: '',
-    password: ''
-  });
-
-  const handleChange = (e) => {
-    const { id, value } = e.target;
-    setFormData({ ...formData, [id]: value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Form submitted!', formData);
-
-    const EventManagementDB = ref(database, 'EventManagement');
-    const newEventManagement = push(EventManagementDB);
-    set(newEventManagement, formData, (error) => {
-      if (error) {
-        console.error('Error saving message:', error);
-      } else {
-        console.log('Message saved successfully!');
-        // Redirect to profile page after signup
-        window.location.href = 'profile.html';
-      }
+    const [formValues, setFormValues] = useState({
+        name: '',
+        lname: '',
+        emailid: '',
+        password: '',
     });
-  };
 
-  return (
-    <div className="container">
-      <span>Have an account? <a href="login.html">Login</a></span>
-      <h2>Sign Up</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="two-forms">
-          <div className="inputBox">
-            <input type="text" className="input-field" id="name" placeholder="Firstname" value={formData.name} onChange={handleChange} />
-            <i className="bx bx-user"></i>
-          </div>
-          <div className="inputBox">
-            <input type="text" className="input-field" id="lname" placeholder="Lastname" value={formData.lname} onChange={handleChange} />
-            <i className="bx bx-user"></i>
-          </div>
-        </div>
-        <div className="inputBox">
-          <input type="email" className="input-field" id="emailid" placeholder="Email" value={formData.emailid} onChange={handleChange} />
-          <i className="bx bx-envelope"></i>
-        </div>
-        <div className="inputBox">
-          <input type="password" className="input-field" id="password" placeholder="Password" value={formData.password} onChange={handleChange} />
-          <i className="bx bx-lock-alt"></i>
-        </div>
-        <div className="inputBox">
-          <button type="submit">Submit</button>
-        </div>
-        <div className="two-col">
-          <div className="one">
-            <input type="checkbox" id="register-check" />
-            <label htmlFor="register-check"> Remember Me</label>
-          </div>
-          <div className="two">
-            <input type="checkbox" id="agreement" />
-            <label htmlFor="agreement" className="terms-label">I agree to these <a href="#">Terms & conditions</a></label>
-          </div>
-        </div>
-      </form>
+    const handleChange = (e) => {
+        const { id, value } = e.target;
+        setFormValues({ ...formValues, [id]: value });
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        saveMessages(formValues.lname, formValues.name, formValues.emailid, formValues.password);
+
+        // Redirect to profile page after signup
+        window.location.href = "profile.html";
+    };
+
+    const saveMessages = (lname, name, emailid, password) => {
+        const newEventManagement = database.ref("EventManagement").push();
+        newEventManagement.set({
+            lname,
+            name,
+            emailid,
+            password,
+        });
+    };
+
+
+    return (
+        <div class="container2">
+        <span class="subheading"> Have an account? <a href="/login" onclick="login()">Login</a></span>
+        <h2 class="heading5">Sign Up</h2>
+        <form action="" id="signupForm">
+  
+                <div class="inputBox">
+                    <input type="text" class="input-field" id="name" placeholder="Firstname" />
+                    <i class="bx bx-user"></i>
+                </div>
+                <div class="inputBox">
+                    <input type="text" class="input-field" id="lname" placeholder="Lastname" />
+                    <i class="bx bx-user"></i>
+                </div>
+                <div class="inputBox">
+                    <input type="email" class="input-field" id="emailid" placeholder="Email" />
+                    <i class="bx bx-envelope"></i>
+                </div>
+                <div class="inputBox">
+                    <input type="password" class="input-field" id="password" placeholder="Password" />
+                    <i class="bx bx-lock-alt"></i>
+                </div>
+                <div class="inputBox">
+                    <button type="submit">Submit</button>
+                </div>
+
+                <div class="two-col">
+                    <div class="one">
+                        <input type="checkbox" id="register-check" />
+                        <label for="register-check"> Remember Me</label>
+                    </div>
+                    <div class="two">
+                        <input type="checkbox" id="agreement"  />
+                        <label for="agreement" class="terms-label">I agree to these <a href="#">Terms & conditions</a></label>
+                    </div>
+                </div>
+        </form>
     </div>
-  );
-};
-
+ 
+    )
+}
 export default SignUp;
