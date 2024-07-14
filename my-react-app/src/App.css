@@ -560,6 +560,7 @@ input[type="submit"]:hover {
   transition: background-color 0.3s linear, font-weight 0.3s linear;
   font-size:15px;
   width:300px;
+  height:40px;
   margin-bottom: 5px;
   border: 2px solid black;
   border-radius: 4px;
@@ -697,16 +698,6 @@ input[type="submit"]:hover {
 /* End of FAQs */
 
 /* Start of Profile */
-.body{
-  margin: 0px;
-  min-height: 100vh;
-  font-family: roboto, Georgia;    
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  overflow-x: hidden;
-}
 
 .container10 {
   background: rgb(255, 255, 255);
@@ -716,6 +707,7 @@ input[type="submit"]:hover {
   position: relative;
   margin-top: 10%;
   box-shadow: 2px 5px 20px rgb(40, 40, 42);
+  margin-bottom: 200px;
 }
 .leftbox1 {
   float: left;
