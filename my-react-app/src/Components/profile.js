@@ -48,9 +48,9 @@ const Profile = () => {
   };
 
   return (
-    <div className="container">
-      <div className="leftbox">
-        <nav>
+    <div className="container10">
+      <div className="leftbox1">
+        <nav class="navbar2">
           {tabs.map((tab, index) => (
             <a key={index} onClick={() => setActiveTab(index)} className={`tab ${activeTab === index ? 'active' : ''}`}>
               <i className={`fa ${icons[index]}`}></i>
@@ -58,7 +58,7 @@ const Profile = () => {
           ))}
         </nav>
       </div>
-      <div className="rightbox">
+      <div className="rightbox1">
         {renderTabContent()}
       </div>
     </div>
@@ -69,27 +69,27 @@ const icons = ["fa-user", "fa-tv", "fa-credit-card", "fa-tasks", "fa-cog"];
 
 const PersonalInfo = ({ userData }) => (
   <div className="profile tabShow">
-    <h1>Personal Info</h1>
-    <h2>First Name</h2>
-    <input type="text" id="profileName" className="input" value={userData.name || ''} readOnly />
-    <h2>Last Name</h2>
-    <input type="text" id="profileLname" className="input" value={userData.lname || ''} readOnly />
-    <h2>Birthday</h2>
-    <input type="text" className="input" value="April 26, 2004" readOnly />
-    <h2>Gender</h2>
-    <input type="text" className="input" value="Female" readOnly />
-    <h2>Email</h2>
-    <input type="text" id="profileEmail" className="input" value={userData.emailid || ''} readOnly />
-    <h2>Password</h2>
-    <input type="password" className="input" value={userData.password || ''} readOnly />
+    <h1 class="head" >Personal Info</h1>
+    <h2 class="inside" >First Name</h2>
+    <input type="text" id="profileName" className="input-write" value={userData.name || ''} readOnly />
+    <h2 class="inside" >Last Name</h2>
+    <input type="text" id="profileLname" className="input-write" value={userData.lname || ''} readOnly />
+    <h2 class="inside" >Birthday</h2>
+    <input type="text" className="input-write" value="April 26, 2004" readOnly />
+    <h2 class="inside" >Gender</h2>
+    <input type="text" className="input-write" value="Female" readOnly />
+    <h2 class="inside" >Email</h2>
+    <input type="text" id="profileEmail" className="input-write" value={userData.emailid || ''} readOnly />
+    <h2 class="inside" >Password</h2>
+    <input type="password" className="input-write" value={userData.password || ''} readOnly />
     <button className="btn">Update</button>
   </div>
 );
 
 const EventsInfo = () => (
   <div className="Event tabShow">
-    <h1>Events Info</h1>
-    <h2>Event Preferences</h2>
+    <h1 class="head" >Events Info</h1>
+    <h2 class="inside" >Event Preferences</h2>
     <select className="events" id="event-type">
       <option value="">Select an event type</option>
       <option value="Wedding Ceremony">Wedding Ceremony</option>
@@ -101,49 +101,49 @@ const EventsInfo = () => (
       <option value="Fundraiser">Fundraiser</option>
       <option value="Others">Others</option>
     </select>
-    <input type="text" className="input" />
-    <h2>Feedbacks</h2>
-    <input type="text" className="input" />
+    <input type="text" className="input-write" />
+    <h2 class="inside" >Feedbacks</h2>
+    <input type="text" className="input-write" />
     <button className="btn">Update</button>
   </div>
 );
 
 const PaymentInfo = () => (
   <div className="payment tabShow">
-    <h1>Payment Info</h1>
-    <h2>Payment Method</h2>
-    <input type="text" className="input" value="MasterCard - 0202 ****** 1234" readOnly />
-    <h2>Billing Address</h2>
-    <input type="text" className="input" value="1234 street, Nairobi" readOnly />
-    <h2>ZipCode</h2>
-    <input type="text" className="input" value="12345 00100" readOnly />
-    <h2>Billing Date</h2>
-    <input type="text" className="input" value="Jan 20, 2012" readOnly />
-    <h2>Redeem Card</h2>
-    <input type="password" id="profilePassword" className="input" value="km" />
+    <h1 class="head" >Payment Info</h1>
+    <h2 class="inside" >Payment Method</h2>
+    <input type="text" className="input-write" value="MasterCard - 0202 ****** 1234" readOnly />
+    <h2 class="inside" >Billing Address</h2>
+    <input type="text" className="input-write" value="1234 street, Nairobi" readOnly />
+    <h2 class="inside" >ZipCode</h2>
+    <input type="text" className="input-write" value="12345 00100" readOnly />
+    <h2 class="inside" >Billing Date</h2>
+    <input type="text" className="input-write" value="Jan 20, 2012" readOnly />
+    <h2 class="inside" >Redeem Card</h2>
+    <input type="password" id="profilePassword" className="input-write" value="km" />
     <button className="btn">Update</button>
   </div>
 );
 
 const PrivacySettings = () => (
   <div className="privacy tabShow">
-    <h1>Privacy Settings</h1>
-    <h2>Manage Email Notifications</h2>
+    <h1 class="head" >Privacy Settings</h1>
+    <h2 class="inside" >Manage Email Notifications</h2>
     <p></p>
-    <h2>Manage Privacy Settings</h2>
+    <h2 class="inside" >Manage Privacy Settings</h2>
     <p></p>
-    <h2>Personalized Ad Experience</h2>
-    <h2>Protect Account</h2>
+    <h2 class="inside" >Personalized Ad Experience</h2>
+    <h2 class="inside" >Protect Account</h2>
     <button className="btn">Update</button>
   </div>
 );
 
 const AccountSettings = () => (
   <div className="settings tabShow">
-    <h1>Account Settings</h1>
-    <h2>Hold Subscription</h2>
+    <h1 class="head" >Account Settings</h1>
+    <h2 class="inside" >Hold Subscription</h2>
     <p></p>
-    <h2>Cancel Subscription</h2>
+    <h2 class="inside" >Cancel Subscription</h2>
     <p></p>
     <button className="btn">Update</button>
   </div>
