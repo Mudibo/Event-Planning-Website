@@ -661,6 +661,7 @@ input[type="submit"]:hover {
   padding: 1em 0;
   border-left: 10px blue solid;
   cursor: pointer;
+  font-size: 20px;
 }
 .Q:hover, 
 .Q:hover .arrow {
@@ -677,8 +678,9 @@ input[type="submit"]:hover {
   transition: 0.3s;
 }
 .faq p {
-  color: blue;
+  color: rgb(0, 0, 255);
   line-height: 25px;
+  font-size: 15px;
 }
 .a {
   overflow: hidden;
