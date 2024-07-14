@@ -11,12 +11,15 @@ document.addEventListener("DOMContentLoaded", function() {
     console.log(`Event type from query parameter: ${eventType}`);
 
     const eventTitle = document.getElementById('event-title');
-    const formContainer = document.getElementById('form-container');
+    const formContainer = document.getElementById('event-form');
+    
+    const paymentForm = document.getElementById('payment-form');
+    const successMessage = document.getElementById('success-message');
 
     const forms = {
         wedding: `
             <div class="form-content" id="weddingPoster">
-                <form action="index.php" method="GET">
+                <form id="weddingForm">
                     <label for="numberOfGuests">Number of Guests:</label>
                     <input type="number" id="numberOfGuests" min="0" max="5000" placeholder=50><br><br>
                     <label for="venue">Venue:</label>
@@ -96,14 +99,14 @@ document.addEventListener("DOMContentLoaded", function() {
                     <label for ="date">Date: </label>
                     <input type="date" id="date" required><br><br>
 
-                    <input type="submit">
+                    <input type="submit" value="Submit">
                     <input type="reset">
 
                 </form>
             </div>`,
         birthday: `
             <div class="form-content" id="birthdayPoster">
-                <form action="index.php" method="GET">
+                <form id="birthdayForm">
                     <label for="numberOfGuests">Number of Guests:</label>
                     <input type="number" id="numberOfGuests" min="0" max="5000" placeholder=50><br><br>
                     <label for="venue">Venue:</label>
@@ -164,14 +167,14 @@ document.addEventListener("DOMContentLoaded", function() {
                     <label for="non-alcoholic">Non-Alcoholic</label>
                     <input type="radio" id="non-alcoholic" value="non-alcoholic" name="beverages"><br><br>
 
-                    <input type="submit">
+                    <input type="submit" value="Submit">
                     <input type="reset">
 
                 </form>
             </div>`,
         corporate: `
             <div class="form-content" id="corporatePoster">
-                <form action="index.php" method="GET">
+                <form id="corporateForm">
                     <label for="numberOfDelegates">Number of Delegates:</label>
                     <input type="number" id="numberOfDelegates" min="0" max="5000" placeholder=50><br><br>
                     <label for="venue">Venue:</label>
@@ -206,14 +209,14 @@ document.addEventListener("DOMContentLoaded", function() {
                     <label for="feedback"> Send Feedback Forms?</label>
                     <input type="checkbox" id="feedback"><br><br>
 
-                    <input type="submit">
+                    <input type="submit" value="Submit">
                     <input type="reset">
 
                 </form>
             </div>`,
         concert: `
             <div class="form-content" id="concertPoster">
-                <form action="index.php" method="GET">
+                <form id="concertForm">
                     <label for="numberOfPeople">Expected number of fans:</label>
                     <input type="number" id="numberOfPeople" min="0" max="5000" placeholder=50><br><br>
                     <label for="venue">Venue:</label>
@@ -266,14 +269,14 @@ document.addEventListener("DOMContentLoaded", function() {
                     <input type="checkbox" id="tickets"><br><br>
                     <label for="backstage">Provide backstage refreshments?</label>
                     <input type="checkbox" id="backstage"><br><br>
-                    <input type="submit">
+                    <input type="submit" value="Submit">
                     <input type="reset">
 
                 </form>
             </div>`,  
         picnic: `
             <div class="form-content" id="picnicPoster">
-                <form action="index.php" method="GET">
+                <form id="picnicForm">
                     <label for="numberOfFriends">Number of friends:</label>
                     <input type="number" id="numberOfFriends" min="0" max="500" placeholder=15><br><br>
                     <label for="venue">Venue:</label>
@@ -316,14 +319,14 @@ document.addEventListener("DOMContentLoaded", function() {
                     <input type="date" id="date" required><br><br>
                     <h3>* Bring your own blankets and music *</h3>
                     
-                    <input type="submit">
+                    <input type="submit" value="Submit">
                     <input type="reset">
 
                 </form>
             </div>`,
         social: `
             <div class="form-content" id="socialPoster">
-                <form action="index.php" method="GET">
+                <form id="socialForm">
                     <label for="numberOfPeople">Number of People:</label>
                     <input type="number" id="numberOfPeople" min="0" max="500" placeholder=15><br><br>
                     <label for="venue">Venue:</label>
@@ -359,14 +362,14 @@ document.addEventListener("DOMContentLoaded", function() {
                     <label for="theme">Theme:</label>
                     <input type="text" id="theme" placeholder="Any theme?"><br><br>
                     
-                    <input type="submit">
+                    <input type="submit" value="Submit">
                     <input type="reset">
 
                 </form>
             </div>`,
         fundraiser: `
             <div class="form-content" id="fundraiserPoster">
-                <form action="index.php" method="GET">
+                <form id="fundraiserForm">
                     <label for="title">Title:</label>
                     <input type="text" id="title" placeholder="Elimisha Fund"><br><br>
                     <label for="goal">Goal (Kshs):</label>
@@ -397,14 +400,14 @@ document.addEventListener("DOMContentLoaded", function() {
                     <label for="cash">Cash</label>
                     <input type="checkbox" id="cash"><br><br>           
                     
-                    <input type="submit">
+                    <input type="submit" value="Submit">
                     <input type="reset">
 
                 </form>
             </div>`,
         other: `
             <div class="form-content" id="otherPoster">
-                <form action="index.php" method="GET">
+                <form id="otherForm">
                     <label for="type">Type:</label>
                     <input type="text" id="type" placeholder="eg Graduation Party"><br><br>
                     <label for="mode">Mode of event:</label>
@@ -423,19 +426,63 @@ document.addEventListener("DOMContentLoaded", function() {
                     <label for="file">Upload any relevant files (invitation, design etc):</label>
                     <input type="file" id="file"><br><br>
                     
-                    <input type="submit">
+                    <input type="submit" value="Submit">
                     <input type="reset">
 
                 </form>
             </div>`,
     };
 
-    if (eventType) {
-        eventTitle.textContent = `${eventType.charAt(0).toUpperCase() + eventType.slice(1)} Event Details`;
-        formContainer.innerHTML = forms[eventType] || '<p>No form available for this event type.</p>';
-        console.log(`Form content loaded for event type: ${eventType}`);
-    } else {
-        formContainer.innerHTML = '<p>No event type specified.</p>';
-        console.error('No event type specified in query parameter.');
+    function loadEventForm(eventType) {
+        eventTitle.textContent = `Event: ${eventType}`;
+        formContainer.innerHTML = forms[eventType] || forms['other'];
+
+        const eventForm = document.querySelector(`#${eventType}Form`);
+        if (!eventForm) {
+            console.error("Event form not found!");
+            return;
+        }
+
+        eventForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            console.log("Event form submitted");
+
+            const formData = new FormData(eventForm);
+            const formEntries = Object.fromEntries(formData.entries());
+
+            updatePaymentForm(formEntries);
+
+            paymentForm.style.display = 'block';
+            successMessage.style.display = 'none';
+        });
     }
+
+    function updatePaymentForm(formEntries) {
+        const paymentDetailsContainer = document.getElementById('payment-details');
+        if (!paymentDetailsContainer) {
+            console.error("Payment details container not found!");
+            return;
+        }
+
+        paymentDetailsContainer.innerHTML = '';
+
+        for (const [key, value] of Object.entries(formEntries)) {
+            const detailElement = document.createElement('p');
+            detailElement.textContent = `${key}: ${value}`;
+            paymentDetailsContainer.appendChild(detailElement);
+        }
+    }
+
+    if (eventType) {
+        loadEventForm(eventType);
+    } else {
+        console.error("Event type not specified in the query parameters.");
+    }
+
+    paymentForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        // Handle payment form submission
+        successMessage.style.display = 'block';
+        paymentForm.style.display = 'none';
+    });
 });
