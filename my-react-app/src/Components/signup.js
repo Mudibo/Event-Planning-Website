@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { database } from "../firebase";
-import { ref, push, set } from "firebase/database";
+import { ref, push, getDatabase } from "firebase/database";
 
 const SignUp = () => {
     const [formValues, setFormValues] = useState({
@@ -10,69 +10,126 @@ const SignUp = () => {
         password: '',
     });
 
+    const [errors, setErrors] = useState({});
+
     const handleChange = (e) => {
         const { id, value } = e.target;
-        setFormValues({ ...formValues, [id]: value });
+        setFormValues({...formValues, [id]: value });
     };
 
-    const handleSubmit = (e) => {
+    const validateForm = () => {
+        const newErrors = {};
+        if (!formValues.name) newErrors.name = 'Firstname is required';
+        if (!formValues.lname) newErrors.lname = 'Lastname is required';
+        if (!formValues.emailid) newErrors.emailid = 'Email is required';
+        if (!formValues.password) newErrors.password = 'Password is required';
+        setErrors(newErrors);
+        return newErrors;
+    };
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        saveMessages(formValues.lname, formValues.name, formValues.emailid, formValues.password);
-
-        // Redirect to profile page after signup
-        window.location.href = "profile.html";
+        const validationErrors = validateForm();
+        if (Object.keys(validationErrors).length > 0) {
+            console.log("Validation errors:", validationErrors);
+            return; // Exit early if there are validation errors
+        }
+    
+        try {
+            const db = getDatabase(database);
+            const newEventManagementRef = ref(db, 'EventManagement');
+            await push(newEventManagementRef, {
+                lname: formValues.lname,
+                name: formValues.name,
+                emailid: formValues.emailid,
+                password: formValues.password,
+            });
+            localStorage.setItem('userEmail', formValues.emailid);
+            console.log("User signed up successfully!");
+            window.location.href = "/profile"; // Redirect to profile page
+        } catch (error) {
+            console.error("Error saving message:", error);
+            setErrors((prevErrors) => ({
+                ...prevErrors,
+                general: "An error occurred while signing up",
+            }));
+        }
     };
-
-    const saveMessages = (lname, name, emailid, password) => {
-        const newEventManagement = database.ref("EventManagement").push();
-        newEventManagement.set({
-            lname,
-            name,
-            emailid,
-            password,
-        });
-    };
-
 
     return (
-        <div class="container2">
-        <span class="subheading"> Have an account? <a href="/login" onclick="login()">Login</a></span>
-        <h2 class="heading5">Sign Up</h2>
-        <form action="" id="signupForm">
-  
-                <div class="inputBox">
-                    <input type="text" class="input-field" id="name" placeholder="Firstname" />
-                    <i class="bx bx-user"></i>
-                </div>
-                <div class="inputBox">
-                    <input type="text" class="input-field" id="lname" placeholder="Lastname" />
-                    <i class="bx bx-user"></i>
-                </div>
-                <div class="inputBox">
-                    <input type="email" class="input-field" id="emailid" placeholder="Email" />
-                    <i class="bx bx-envelope"></i>
-                </div>
-                <div class="inputBox">
-                    <input type="password" class="input-field" id="password" placeholder="Password" />
-                    <i class="bx bx-lock-alt"></i>
-                </div>
-                <div class="inputBox">
-                    <button type="submit">Submit</button>
+        <div className="container2">
+            <span className="subheading"> Have an account? <a href="/login" onClick={() => {}}>Login</a></span>
+            <h2 className="heading5">Sign Up</h2>
+            <form onSubmit={handleSubmit} id="signupForm">
+                <div className="inputBox">
+                    <input
+                        type="text"
+                        className="input-field"
+                        id="name"
+                        placeholder="Firstname"
+                        value={formValues.name}
+                        onChange={handleChange}
+                    />
+                    <i className="bx bx-user"></i>
+                    {errors.name && <div className="error">{errors.name}</div>}
                 </div>
 
-                <div class="two-col">
-                    <div class="one">
+                <div className="inputBox">
+                    <input
+                        type="text"
+                        className="input-field"
+                        id="lname"
+                        placeholder="Lastname"
+                        value={formValues.lname}
+                        onChange={handleChange}
+                    />
+                    <i className="bx bx-user"></i>
+                    {errors.lname && <div className="error">{errors.lname}</div>}
+                </div>
+
+                <div className="inputBox">
+                    <input
+                        type="email"
+                        className="input-field"
+                        id="emailid"
+                        placeholder="Email"
+                        value={formValues.emailid}
+                        onChange={handleChange}
+                    />
+                    <i className="bx bx-envelope"></i>
+                    {errors.emailid && <div className="error">{errors.emailid}</div>}
+                </div>
+
+                <div className="inputBox">
+                    <input
+                        type="password"
+                        className="input-field"
+                        id="password"
+                        placeholder="Password"
+                        value={formValues.password}
+                        onChange={handleChange}
+                    />
+                    <i className="bx bx-lock-alt"></i>
+                    {errors.password && <div className="error">{errors.password}</div>}
+                </div>
+
+                <div className="inputBox">
+                    <button type="submit">Register</button>
+                </div>
+
+                <div className="two-col">
+                    <div className="one">
                         <input type="checkbox" id="register-check" />
-                        <label for="register-check"> Remember Me</label>
+                        <label htmlFor="register-check"> Remember Me</label>
                     </div>
-                    <div class="two">
-                        <input type="checkbox" id="agreement"  />
-                        <label for="agreement" class="terms-label">I agree to these <a href="#">Terms & conditions</a></label>
+                    <div className="two">
+                        <input type="checkbox" id="agreement" />
+                        <label htmlFor="agreement" className="terms-label">I agree to these <a href="#">Terms & conditions</a></label>
                     </div>
                 </div>
-        </form>
-    </div>
- 
-    )
-}
+            </form>
+        </div>
+    );
+};
+
 export default SignUp;

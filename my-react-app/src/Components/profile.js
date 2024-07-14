@@ -24,7 +24,7 @@ const Profile = () => {
         console.error(error);
       });
     } else {
-      window.location.href = "login.html";
+      window.location.href = "/login";
     }
   }, [userEmail]);
 
