@@ -69,12 +69,11 @@ const icons = ["fa-user", "fa-tv", "fa-credit-card", "fa-tasks", "fa-cog"];
 
 const PersonalInfo = ({ userData }) => {
   const [formData, setFormData] = useState({
-    firstName: userData.firstName || '',
-    lastName: userData.lastName || '',
-    birthday: userData.birthday || '',
-    gender: userData.gender || '',
-    email: userData.email || '',
+    firstName: userData.fname || '',
+    lastName: userData.lname || '',
+    email: userData.emailid || '',
     password: '',
+    // Add any other fields you need
   });
 
   const handleChange = (e) => {
@@ -105,22 +104,6 @@ const PersonalInfo = ({ userData }) => {
         value={formData.lastName}
         onChange={handleChange}
       />
-      <h2 className="inside">Birthday</h2>
-      <input
-        type="text"
-        name="birthday"
-        className="input-write"
-        value={formData.birthday}
-        onChange={handleChange}
-      />
-      <h2 className="inside">Gender</h2>
-      <input
-        type="text"
-        name="gender"
-        className="input-write"
-        value={formData.gender}
-        onChange={handleChange}
-      />
       <h2 className="inside">Email</h2>
       <input
         type="text"
@@ -143,27 +126,56 @@ const PersonalInfo = ({ userData }) => {
   );
 };
 
-const EventsInfo = () => (
-  <div className="Event tabShow">
-    <h1 className="head">Events Info</h1>
-    <h2 className="inside">Event Preferences</h2>
-    <select className="events" id="event-type">
-      <option value="">Select an event type</option>
-      <option value="Wedding Ceremony">Wedding Ceremony</option>
-      <option value="Birthday Party">Birthday Party</option>
-      <option value="Corporate Event">Corporate Event</option>
-      <option value="Concert">Concert</option>
-      <option value="Paint and sip/Picnic">Paint and sip/Picnic</option>
-      <option value="Social Gathering">Social Gathering</option>
-      <option value="Fundraiser">Fundraiser</option>
-      <option value="Others">Others</option>
-    </select>
-    <input type="text" className="input-write" />
-    <h2 className="inside">Feedbacks</h2>
-    <input type="text" className="input-write" />
-    <button className="btn">Update</button>
-  </div>
-);
+const EventsInfo = () => {
+  const [eventPreferences, setEventPreferences] = useState('');
+  const [feedback, setFeedback] = useState('');
+
+  const handleEventPreferencesChange = (e) => {
+    setEventPreferences(e.target.value);
+  };
+
+  const handleFeedbackChange = (e) => {
+    setFeedback(e.target.value);
+  };
+
+  const handleEventUpdate = () => {
+    // Handle the event update logic here
+    console.log('Updated event preferences:', eventPreferences);
+    console.log('Updated feedback:', feedback);
+  };
+
+  return (
+    <div className="Event tabShow">
+      <h1 className="head">Events Info</h1>
+      <h2 className="inside">Event Preferences</h2>
+      <select
+        className="events"
+        id="event-type"
+        value={eventPreferences}
+        onChange={handleEventPreferencesChange}
+      >
+        <option value="">Select an event type</option>
+        <option value="Wedding Ceremony">Wedding Ceremony</option>
+        <option value="Birthday Party">Birthday Party</option>
+        <option value="Corporate Event">Corporate Event</option>
+        <option value="Concert">Concert</option>
+        <option value="Paint and sip/Picnic">Paint and sip/Picnic</option>
+        <option value="Social Gathering">Social Gathering</option>
+        <option value="Fundraiser">Fundraiser</option>
+        <option value="Others">Others</option>
+      </select>
+      <h2 className="inside">Feedback</h2>
+      <input
+        type="text"
+        className="input-write"
+        value={feedback}
+        onChange={handleFeedbackChange}
+        placeholder="Your feedback"
+      />
+      <button className="btn" onClick={handleEventUpdate}>Update</button>
+    </div>
+  );
+};
 
 const PaymentInfo = () => {
   const [paymentData, setPaymentData] = useState({
@@ -240,6 +252,7 @@ const PrivacySettings = () => (
     <h2 className="inside">Manage Privacy Settings</h2>
     <p></p>
     <h2 className="inside">Personalized Ad Experience</h2>
+    <p></p>
     <h2 className="inside">Protect Account</h2>
     <button className="btn">Update</button>
   </div>

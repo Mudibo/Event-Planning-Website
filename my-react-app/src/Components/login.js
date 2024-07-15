@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { app, database } from '../firebase'; 
 
 const Login = () => {
   const [emailid, setEmailid] = useState('');
