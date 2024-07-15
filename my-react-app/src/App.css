@@ -807,6 +807,36 @@ span {
 }
 
 /* End of Profile */
+/* Events styling */
+.form-content {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid black;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.form-group {
+  display: flex; /* Use flexbox for label and input alignment */
+  flex-direction: column; /* Align labels above inputs */
+  margin-bottom: 15px; /* Space between form groups */
+}
+
+.lbl_event {
+  color: black;
+  font-weight: bold;
+  margin-bottom: 5px; /* Space between label and input */
+}
+#event-form {
+  width:80%;
+  margin-left:60px;
+}
+#event-form h1 {
+  text-align:center;
+}
+
+
+/* end of events styling */
 /* start of vendor page styling */
 .container_body {
   padding: 2rem;
