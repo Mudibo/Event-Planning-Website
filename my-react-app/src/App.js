@@ -13,6 +13,7 @@ import FAQs from './Components/faq';
 import Profile from './Components/profile';
 import ContactsPage from './Pages/contacts';
 import VendorPage from './Pages/vendor';
+import EventPage from './Pages/events';
 function App() {
   return (
     <Router>
@@ -28,6 +29,7 @@ function App() {
         <Route path="/profile" element={<Profile/>} />
         <Route path="/contacts" element={<ContactsPage/>}/>
         <Route path="/vendors" element={<VendorPage/>}/>
+        <Route path="/events" element={<EventPage/>}/>
       </Routes>
       <Footer/>
     </Router>
