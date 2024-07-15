@@ -133,6 +133,7 @@ const PersonalInfo = ({ userData }) => {
       <input
         type="password"
         name="password"
+        id="part"
         className="input-write"
         value={formData.password}
         onChange={handleChange}
@@ -221,6 +222,7 @@ const PaymentInfo = () => {
       <input
         type="password"
         name="redeemCard"
+        id="part"
         className="input-write"
         value={paymentData.redeemCard}
         onChange={handlePaymentChange}

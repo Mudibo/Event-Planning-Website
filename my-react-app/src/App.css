@@ -805,7 +805,11 @@ span {
   padding: 5px 50px;
   transition: background-color 0.3s linear, font-weight 0.3s linear;
 }
-
+#part{
+  border: 2px solid black;
+  border-radius: 4px;
+  height: 30px;
+}
 /* End of Profile */
 /* start of vendor page styling */
 .container_body {
