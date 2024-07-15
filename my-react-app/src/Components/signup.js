@@ -28,7 +28,8 @@ const SignUp = () => {
     };
 
     const handleSubmit = async (e) => {
-        e.preventDefault();
+        e.preventDefault(); // Prevent default form submission
+        console.log("Form submitted"); // Debug message to check form submission
         const validationErrors = validateForm();
         if (Object.keys(validationErrors).length > 0) {
             console.log("Validation errors:", validationErrors);
@@ -46,7 +47,7 @@ const SignUp = () => {
             });
             localStorage.setItem('userEmail', formValues.emailid);
             console.log("User signed up successfully!");
-            window.location.href = "/login"; // Redirect to profile page
+            window.location.href = "/profile"; // Redirect to profile page
         } catch (error) {
             console.error("Error saving message:", error);
             setErrors((prevErrors) => ({
