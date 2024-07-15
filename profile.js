@@ -24,7 +24,29 @@ document.addEventListener("DOMContentLoaded", function() {
                     document.getElementById("profileName").value = user.name;
                     document.getElementById("profileLname").value = user.lname;
                     document.getElementById("profileEmail").value = user.emailid;
-                    document.querySelector("input[type='password']").value = user.password; 
+                    document.querySelector("input[type='password']").value = user.password;
+                    
+                    // Assuming user.events is an array of booked events
+                    if (user.events) {
+                        var eventsContainer = document.getElementById("userEvents");
+                        user.events.forEach(function(event) {
+                            var eventDiv = document.createElement("div");
+                            eventDiv.classList.add("event");
+                            eventDiv.innerHTML = `
+                                <h2>${event.name}</h2>
+                                <p>Date: ${event.date}</p>
+                                <p>Type: ${event.type}</p>
+                                <p>Location: ${event.location}</p>
+                            `;
+                            eventsContainer.appendChild(eventDiv);
+                        });
+                    } else {
+                        var eventsContainer = document.getElementById("userEvents");
+                        var noEventsDiv = document.createElement("div");
+                        noEventsDiv.classList.add("no-events");
+                        noEventsDiv.innerHTML = `<p>No booked events.</p>`;
+                        eventsContainer.appendChild(noEventsDiv);
+                    }
                 });
             } else {
                 displayError("User data not found.");
@@ -57,7 +79,7 @@ $(".tab").click(function() {
     $(this).addClass("active").siblings().removeClass("active");
 })
 
-//For the event option
+// For the event option
 const list = document.querySelectorAll(".link li");
 const select = document.createElement("select");
 select.id = "event-type";
