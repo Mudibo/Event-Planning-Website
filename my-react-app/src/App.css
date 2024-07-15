@@ -643,47 +643,51 @@ input[type="submit"]:hover {
 
 /* Start of FAQs */
 .title {
+  color:black;
   text-align: center;
-  font-size: 30px;
-  margin: 30px;
+  margin: 0 0 2rem;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size:30px;
 }
 .faq-section {
   padding: 4em 2em;
+  margin-bottom: 10px;
 }
 .faq {
   list-style: none;
   max-width: 700px;
   margin: 0 auto;
+  justify-content: center;
+  align-items: center;
 }
 .faq li {
-  background: #caf0f8;
-  border-bottom: 1px rgb(33, 160, 239);
+  background: #ffffff;
+  border-bottom: 1px rgb(0, 0, 0);
 }
 .faq li:first-child {
-  border-top: 1px rgb(33, 160, 239);
+  border-top: 1px rgb(0, 0, 0);
 }
 .Q {
   padding: 1em 0;
-  border-left: 10px blue solid;
   cursor: pointer;
   font-size: 20px;
 }
 .Q:hover, 
 .Q:hover .arrow {
-  border-left-color: rgb(33, 160, 239);
+  border-left-color: rgb(86, 82, 82);
 }
 .arrow {
   display: inline-block;
   margin: 0 0.5em;
   width: 0;
   height: 0;
-  border-top: 6px solid teal;
-  border-left: 10px solid yellowgreen;
-  border-bottom: 6px solid turquoise;
+  border-top: 6px solid rgb(55, 62, 62);
+  border-left: 10px solid rgb(0, 0, 0);
+  border-bottom: 6px solid rgb(131, 156, 154);
   transition: 0.3s;
 }
 .faq p {
-  color: rgb(0, 0, 255);
+  color: rgb(0, 0, 0);
   line-height: 25px;
   font-size: 15px;
 }
