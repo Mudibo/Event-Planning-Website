@@ -125,6 +125,7 @@
   width:100%;
   margin-top:50px;
 }
+#profileName{}
 .contributors p {
   text-align: center;
   justify-content: center;
@@ -561,7 +562,7 @@ input[type="submit"]:hover {
   font-size:15px;
   width:300px;
   height:40px;
-  margin-bottom: 5px;
+  max-height: 100px;
   border: 2px solid black;
   border-radius: 4px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -570,9 +571,12 @@ input[type="submit"]:hover {
   background: rgb(255, 255, 255);
   box-shadow: 1px 5px 7px 1px hsl(240, 2%, 19%);
 }
-#name, #lname, #emailid, #password {
-  margin: 5px 0;
+#fname,#lname,#emailid, #password,#login_password,#login_emailid {
   padding: 10px;
+  margin-right: -40px;
+}
+#fname,#lname{
+  margin-bottom: -2px;
 }
 
 .btn_subsign{
@@ -702,7 +706,7 @@ input[type="submit"]:hover {
 .container10 {
   background: rgb(255, 255, 255);
   width: 540px;
-  height: 450px; 
+  height: 700px; 
   margin: 0 auto;
   position: relative;
   margin-top: 10%;

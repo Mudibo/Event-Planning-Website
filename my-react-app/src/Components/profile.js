@@ -71,17 +71,17 @@ const PersonalInfo = ({ userData }) => (
   <div className="profile tabShow">
     <h1 class="head" >Personal Info</h1>
     <h2 class="inside" >First Name</h2>
-    <input type="text" id="profileName" className="input-write" value={userData.name || ''} readOnly />
+    <input type="text" id="profileName" className="input-write" value={userData.name }/>
     <h2 class="inside" >Last Name</h2>
-    <input type="text" id="profileLname" className="input-write" value={userData.lname || ''} readOnly />
+    <input type="text" id="profileLname" className="input-write" value={userData.lname }/>
     <h2 class="inside" >Birthday</h2>
-    <input type="text" className="input-write" value="April 26, 2004" readOnly />
+    <input type="text" className="input-write" value="April 26, 2004"  />
     <h2 class="inside" >Gender</h2>
-    <input type="text" className="input-write" value="Female" readOnly />
+    <input type="text" className="input-write" value="Female"  />
     <h2 class="inside" >Email</h2>
-    <input type="text" id="profileEmail" className="input-write" value={userData.emailid || ''} readOnly />
+    <input type="text" id="profileEmail" className="input-write" value={userData.emailid}  />
     <h2 class="inside" >Password</h2>
-    <input type="password" className="input-write" value={userData.password || ''} readOnly />
+    <input type="password" className="input-write" value={userData.password }  />
     <button className="btn">Update</button>
   </div>
 );

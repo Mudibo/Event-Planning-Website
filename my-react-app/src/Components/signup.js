@@ -4,7 +4,7 @@ import { ref, push, getDatabase } from "firebase/database";
 
 const SignUp = () => {
     const [formValues, setFormValues] = useState({
-        name: '',
+        fname: '',
         lname: '',
         emailid: '',
         password: '',
@@ -19,7 +19,7 @@ const SignUp = () => {
 
     const validateForm = () => {
         const newErrors = {};
-        if (!formValues.name) newErrors.name = 'Firstname is required';
+        if (!formValues.fname) newErrors.fname = 'Firstname is required';
         if (!formValues.lname) newErrors.lname = 'Lastname is required';
         if (!formValues.emailid) newErrors.emailid = 'Email is required';
         if (!formValues.password) newErrors.password = 'Password is required';
@@ -40,13 +40,13 @@ const SignUp = () => {
             const newEventManagementRef = ref(db, 'EventManagement');
             await push(newEventManagementRef, {
                 lname: formValues.lname,
-                name: formValues.name,
+                fname: formValues.fname,
                 emailid: formValues.emailid,
                 password: formValues.password,
             });
             localStorage.setItem('userEmail', formValues.emailid);
             console.log("User signed up successfully!");
-            window.location.href = "/profile"; // Redirect to profile page
+            window.location.href = "/login"; // Redirect to profile page
         } catch (error) {
             console.error("Error saving message:", error);
             setErrors((prevErrors) => ({
@@ -65,13 +65,13 @@ const SignUp = () => {
                     <input
                         type="text"
                         className="input-field"
-                        id="name"
+                        id="fname"
                         placeholder="Firstname"
-                        value={formValues.name}
+                        value={formValues.fname}
                         onChange={handleChange}
                     />
                     <i className="bx bx-user"></i>
-                    {errors.name && <div className="error">{errors.name}</div>}
+                    {errors.fname && <div className="error">{errors.fname}</div>}
                 </div>
 
                 <div className="inputBox">
