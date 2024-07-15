@@ -1,3 +1,6 @@
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
 document.addEventListener("DOMContentLoaded", function() {
     function getQueryParameter(name) {
         const urlParams = new URLSearchParams(window.location.search);
@@ -449,6 +452,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
             const formData = new FormData(eventForm);
             const formEntries = Object.fromEntries(formData.entries());
+            localStorage.setItem("eventFormData", JSON.stringify(formEntries)); // Store form data temporarily
 
             updatePaymentForm(formEntries);
 
@@ -481,8 +485,26 @@ document.addEventListener("DOMContentLoaded", function() {
 
     paymentForm.addEventListener('submit', function(event) {
         event.preventDefault();
-        // Handle payment form submission
-        successMessage.style.display = 'block';
-        paymentForm.style.display = 'none';
+        const userEmail = localStorage.getItem("userEmail");
+        const eventData = JSON.parse(localStorage.getItem("eventFormData"));
+
+        if (userEmail && eventData) {
+            const newEventKey = firebase.database().ref().child('EventManagement').push().key;
+            const updates = {};
+            updates[`/EventManagement/${newEventKey}`] = {
+                ...eventData,
+                emailid: userEmail,
+                eventType: eventType,
+                status: 'booked'
+            };
+            firebase.database().ref().update(updates).then(() => {
+                successMessage.style.display = 'block';
+                paymentForm.style.display = 'none';
+            }).catch((error) => {
+                console.error("Error updating Firebase: ", error);
+            });
+        } else {
+            console.error("User email or event data not found.");
+        }
     });
 });
