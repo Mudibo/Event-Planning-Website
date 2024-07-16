@@ -25,7 +25,7 @@ const FAQs = () => {
                     <li key={index}>
                         <div className="Q" onClick={() => toggleAnswer(index)}>
                             <span className={`arrow ${activeIndex === index ? 'arrow-rotated' : ''}`}></span>
-                            <span>{item.question}</span>
+                            <span className="faq_question">{item.question}</span>
                         </div>
                         <div className={`a ${activeIndex === index ? 'a-opened' : ''}`}>
                             <p>{item.answer}</p>

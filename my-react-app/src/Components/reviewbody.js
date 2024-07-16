@@ -21,8 +21,8 @@ const ReviewBody = () => {
 
   return (
     <div className="container_1">
-      <h1 clasName="addareview">ADD A REVIEW</h1>
       <form className="form" onSubmit={handleSubmit}>
+      <h1 clasName="addareview">ADD A REVIEW</h1>
         <label className="label" htmlFor="name">Name:</label>
         <input
           type="text"
