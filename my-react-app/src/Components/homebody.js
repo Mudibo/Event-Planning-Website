@@ -1,4 +1,6 @@
 //Body content of home page
+import React from 'react';
+import { Link } from 'react-router-dom';
 import peopleSmilingSafariRally from '../Images/peopleSmilingSafariRally.png';
 import quote from '../Icons/quote.png';
 import ElonMusk from '../Images/ElonMusk.jpg';
@@ -20,7 +22,7 @@ const HomeBody = () => {
                 <div className="text">
                     <h2>Planning professional events has never been easier!</h2>
                     <p>Our easy-to-use website can help you plan successful events in a matter of minutes!</p>
-                    <a href="events.html"><button id="getStarted">GET STARTED</button></a>
+                    <Link to="/events"><button id="getStarted">GET STARTED</button></Link>
                 </div>
                     <img src={peopleSmilingSafariRally} alt = "people Smiling" className="peopleSmilingSafariRally"/>
             </div>
