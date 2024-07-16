@@ -370,6 +370,7 @@ input[type="submit"]:hover {
   margin-bottom: 10px;
   margin-top: 10px;
   font-family: playfair;
+  margin-left:-80px;
 }
 .testimonial{
   font-size: 22px;
@@ -457,6 +458,7 @@ input[type="submit"]:hover {
 .main-content4{
   height: auto;
   background-color: black;
+  margin-bottom:0;
 }
 .main-content4 h2{
   font-size: 70px;
@@ -985,7 +987,7 @@ input[type="submit"]:hover {
   padding: 20px 0px; 
   position: relative; 
   bottom: 0px; 
-  margin-top:20px;
+ 
 }
 .footer2 ul{
   list-style-type: none;
