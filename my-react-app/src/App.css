@@ -683,6 +683,14 @@ input[type="submit"]:hover {
 /* End of SignUp & Login */
 
 /* Start of FAQs */
+body {
+  background: url(Images/Background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  margin-bottom: 100px;
+}
 .title {
   color:black;
   text-align: center;
