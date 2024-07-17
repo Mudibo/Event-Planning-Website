@@ -702,6 +702,7 @@ body {
 .faq-section {
   padding: 4em 2em;
   margin-bottom: 10px; 
+
 }
 .faq {
   list-style: none;
@@ -709,11 +710,13 @@ body {
   margin: 0 auto;
   justify-content: center;
   align-items: center;
- 
+  border:2px solid black;
+  border-radius:10px;
 }
 .faq li {
   background: #ffffff;
   border-bottom: 1px rgb(0, 0, 0);
+  border:2px solid black;
 }
 .faq li:first-child {
   border-top: 1px rgb(0, 0, 0);
