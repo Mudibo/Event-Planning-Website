@@ -123,7 +123,8 @@ const EventForm = () => {
     };
 
     return (
-        <div id="event-form">
+       <div className="">
+             <div id="event-form">
             <h1 id="event-title">{eventType.toUpperCase()}</h1>
             <div className="select-event">
                 <label>Select Event Type:</label>
@@ -156,6 +157,7 @@ const EventForm = () => {
                 </div>
             )}
         </div>
+       </div>
     );
 };
 

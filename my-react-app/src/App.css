@@ -5,6 +5,11 @@
   background-color: transparent;
   transition: background-color 0.3s linear, border-bottom 0.3s linear;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+  background: url(Images/Background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
 }
 .navbar img{
   width: 100px;
@@ -42,11 +47,17 @@
   padding:5px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 20px;
+  
 }
 .about-summary {
   width:100%;
   margin-left:0;
-  margin-top:30px;
+  margin-top:0;
+  background: url(Images/Background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
   
 }
 .who-we-are  {
@@ -184,6 +195,18 @@ ul {
   border-radius: 10px;
   margin-top:0;
   border: 2px soild black;
+  background: url(Images/Background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+.review_body{
+  background: url(Images/Background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .review {
@@ -215,7 +238,7 @@ ul {
   border-radius:10px;
   width:50%;
   margin-left:20%;
-  
+  background-color: white;
 }
 
 input[type="text"], select, textarea {
@@ -288,11 +311,11 @@ input[type="submit"]:hover {
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
   margin: 0px;
   min-height: 100vh; 
-  /*background: url(Images/Background.jpg);
+  background: url(Images/Background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-attachment: fixed;*/
+  background-attachment: fixed;
 }
 .main-content2{
   display: flex;
@@ -505,7 +528,14 @@ input[type="submit"]:hover {
   padding: 10px 0 10px 0;
   padding:0;
   margin-top:10px;
-  margin-bottom:60px;
+  margin-bottom:20px;
+}
+.form_log {
+  border:2px solid black;
+  margin-bottom:130px;
+  padding:10px 60px;
+  border-radius:10px;
+  background-color:white;
 }
 .container2 {
   transition: .5s ease-in-out;
@@ -514,7 +544,12 @@ input[type="submit"]:hover {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin-bottom: 250px;
+  margin-bottom: 0;
+  background: url(Images/Background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
 }
 .container2 form{
   width: 100%;
@@ -529,6 +564,7 @@ input[type="submit"]:hover {
   left: 0px;
   color: rgb(0, 0, 0);
   margin-bottom: 20px;
+  margin-top:10px;
 }
 .inputBox button{
   width: 325px;    
@@ -635,6 +671,7 @@ input[type="submit"]:hover {
   padding: 5px;
   justify-content: center;
   margin-top:150px;
+  margin-bottom:-20px;
 }
 .subheading a{
   font-weight: 500;
@@ -828,8 +865,16 @@ span {
 }
 /* End of Profile */
 /* Events styling */
+.event_body_content{
+  background: url(Images/Background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
 #event-form {
   max-width: 600px;
+  margin-top:0;
   margin: auto;
   padding: 20px;
   border: 2px solid black;
@@ -841,6 +886,7 @@ span {
 #event-title {
   text-align: center;
   margin-bottom: 20px;
+  margin-top:0;
   color: black;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
@@ -927,8 +973,14 @@ span {
   margin-top: 50px;
   border-radius: 20px;
   margin-top: 0;
-  border: 2px solid black;
-  
+  border: 2px solid black; 
+}
+.entire_vendor_body{
+  background: url(Images/Background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
 }
 .container_body h1{
   padding: 15px;
@@ -977,6 +1029,7 @@ input[type="submit"]:hover {
   background-color: red;
 }
 /*end of vendor page styling*/
+
 
 /*Footer styling */
 .footer2{

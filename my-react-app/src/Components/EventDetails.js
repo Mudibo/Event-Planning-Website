@@ -3,7 +3,7 @@ import EventForm from './EventForm';
 
 const EventDetails = () => {
   return (
-    <div>
+    <div className="event_body_content">
       <main>
         <h2 id="event-title">Event Details</h2>
         

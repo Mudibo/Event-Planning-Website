@@ -32,7 +32,7 @@ const Login = () => {
         Don't have an account? <a href="/signup">Sign Up</a>
       </span>
       <h2 className="heading5">Login</h2>
-      <form onSubmit={handleSubmit}>
+      <form className="form_log"onSubmit={handleSubmit}>
         <div className="inputBox">
           <input
             type="email"

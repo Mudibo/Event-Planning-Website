@@ -17,7 +17,7 @@ import EventPage from './Pages/events';
 function App() {
   return (
     <Router>
-      <Header/>
+      
       <Routes>
         <Route exact path="/" element={<HomePage />}/>
         <Route path="/home" element={<HomePage />}/>

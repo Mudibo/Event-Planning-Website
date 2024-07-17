@@ -17,7 +17,8 @@ const ContactUs = () => {
     setReview('');
   };
   return (
-    <div className="container_1">
+    <div className="contacts_entire_body">
+      <div className="container_1">
       <form className="form" onSubmit={handleSubmit}>
       <h1 clasName="addareview">ADD A QUERY</h1>
         <label className="label" htmlFor="name">Name:</label>
@@ -53,6 +54,7 @@ const ContactUs = () => {
           ))}
         </ul>
       </div>
+    </div>
     </div>
   );
 };

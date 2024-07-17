@@ -19,7 +19,8 @@ const VendorRegistration = () => {
         setDescription('');
     };
     return (
-        <div className="container_body">
+        <div className="entire_vendor_body">
+            <div className="container_body">
             <h1>Vendor Registration</h1>
             <form className="form_vendors"onSubmit={handleSubmit}>
                 <label className="lbl_vendors" htmlFor="name">Name:</label>
@@ -73,6 +74,7 @@ const VendorRegistration = () => {
 
                 <input type="submit" value="Register"/>
             </form>
+        </div>
         </div>
     );
 };

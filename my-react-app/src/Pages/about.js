@@ -6,6 +6,7 @@ import Footer from '../Components/Footer';
 const AboutPage = () => {
     return (
         <div>
+            <Header/>
             <AboutBody/> 
         </div>
     );

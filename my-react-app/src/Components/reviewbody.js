@@ -20,7 +20,8 @@ const ReviewBody = () => {
   };
 
   return (
-    <div className="container_1">
+    <div className="review_body">
+      <div className="container_1">
       <form className="form" onSubmit={handleSubmit}>
       <h1 clasName="addareview">ADD A REVIEW</h1>
         <label className="label" htmlFor="name">Name:</label>
@@ -73,6 +74,7 @@ const ReviewBody = () => {
           ))}
         </ul>
       </div>
+    </div>
     </div>
   );
 };
