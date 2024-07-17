@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { ref, query, orderByChild, equalTo, get } from 'firebase/database';
+import { ref, query, orderByChild, equalTo, get, update } from 'firebase/database';
 import { database } from '../firebase';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'boxicons/css/boxicons.min.css';
@@ -67,24 +67,49 @@ const Profile = () => {
 
 const icons = ["fa-user", "fa-tv", "fa-credit-card", "fa-tasks", "fa-cog"];
 
-const PersonalInfo = ({ userData }) => {
+const PersonalInfo = ({ userData, setUserData }) => {
   const [formData, setFormData] = useState({
     firstName: userData.fname || '',
     lastName: userData.lname || '',
     email: userData.emailid || '',
     password: '',
-    // Add any other fields you need
   });
+
+  useEffect(() => {
+    setFormData({
+      firstName: userData.fname || '',
+      lastName: userData.lname || '',
+      email: userData.emailid || '',
+      password: '',
+    });
+  }, [userData]);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleUpdate = () => {
-    // Handle the update logic here
-    console.log('Updated user data:', formData);
+    if (userData.key) {
+      const userRef = ref(database, `EventManagement/${userData.key}`);
+      update(userRef, {
+        fname: formData.firstName,
+        lname: formData.lastName,
+        emailid: formData.email,
+      }).then(() => {
+        setUserData({
+         ...userData,
+          fname: formData.firstName,
+          lname: formData.lastName,
+          emailid: formData.email,
+        });
+        alert('Profile updated successfully.');
+      }).catch((error) => {
+        console.error("Error updating profile:", error);
+        alert('Failed to update profile.');
+      });
+    }
   };
-
+  
   return (
     <div className="profile tabShow">
       <h1 className="head">Personal Info</h1>
