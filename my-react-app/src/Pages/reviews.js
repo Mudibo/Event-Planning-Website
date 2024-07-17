@@ -5,7 +5,7 @@ import Header from '../Components/Header'
 const ReviewPage = () => {
     return (
         <div>
-            <Header/>
+            
             <ReviewBody/>
         </div>
     )

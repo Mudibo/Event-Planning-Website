@@ -4,7 +4,7 @@ import Header from "../Components/Header";
 const ContactsPage = () => {
     return (
         <div>
-            <Header/>
+            
             <ContactUs/>
         </div>
     );

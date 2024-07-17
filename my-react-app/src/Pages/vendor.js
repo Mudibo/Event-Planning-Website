@@ -4,7 +4,7 @@ import Header from "../Components/Header";
 const VendorPage = () => {
     return (
         <div>
-            <Header/>
+           
             <VendorRegistration/>
         </div>
     )
