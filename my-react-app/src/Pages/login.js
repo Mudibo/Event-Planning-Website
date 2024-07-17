@@ -1,6 +1,7 @@
 //Login page
 import React, {useState} from 'react';
-import Header from '../Components/Header'
+import Login from '../Components/loginbody';
+import Header from '../Components/Header';
 const Login = () => {
     return(
         <div>
