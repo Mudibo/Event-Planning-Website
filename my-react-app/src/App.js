@@ -7,10 +7,10 @@ import AboutPage from './Pages/about';
 import Footer from './Components/Footer';
 import HomePage from './Pages/home';
 import ReviewPage from './Pages/reviews';
-import Login from './Components/login';
-import SignUp from './Components/signup';
-import FAQs from './Components/faq';
-import Profile from './Components/profile';
+import Login from './Components/loginbody';
+import SignUp from './Components/signupbody';
+import FAQs from './Components/faqbody';
+import Profile from './Components/profilebody';
 import ContactsPage from './Pages/contacts';
 import VendorPage from './Pages/vendor';
 import EventPage from './Pages/events';
@@ -22,8 +22,8 @@ function App() {
         <Route exact path="/" element={<HomePage />}/>
         <Route path="/home" element={<HomePage />}/>
         <Route path="/about" element={<AboutPage />}/>
-        <Route path="/login" Component={Login} />
-        <Route path="/signup" Component={SignUp} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
         <Route path="/reviews" element={<ReviewPage/>} />
         <Route path="/faq" element={<FAQs/>} />
         <Route path="/profile" element={<Profile/>} />
